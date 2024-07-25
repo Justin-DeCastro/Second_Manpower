@@ -41,13 +41,13 @@ class HomeController extends Controller
   }
   public function bulletin(){
     $bulletins = Bulletin::all();
-    return view('User.bulletin',compact('bulletins'));
+    return view('home.bulletin',compact('bulletins'));
   }
   public function profile(){
     return view('Home.profile');
   }
   public function labor(){
-    return view('User.labor');
+    return view('home.labor');
   }
   public function contact(){
     return view('User.contact');
