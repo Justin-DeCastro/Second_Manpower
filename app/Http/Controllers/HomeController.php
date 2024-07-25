@@ -37,14 +37,14 @@ class HomeController extends Controller
     return view('User.services');
   }
   public function requisition(){
-    return view('User.manpower');
+    return view('Home.requisition');
   }
   public function bulletin(){
     $bulletins = Bulletin::all();
     return view('User.bulletin',compact('bulletins'));
   }
   public function profile(){
-    return view('User.profile');
+    return view('Home.profile');
   }
   public function labor(){
     return view('User.labor');

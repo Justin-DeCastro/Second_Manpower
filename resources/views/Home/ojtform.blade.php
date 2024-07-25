@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title Here</title>
+    <title>OJT FORM</title>
     
     <!-- External CSS -->
-    <link rel="stylesheet" href="path/to/your/external.css">
+
 </head>
 <body>
     @include('Components.header')
