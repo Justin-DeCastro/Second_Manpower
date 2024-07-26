@@ -83,13 +83,19 @@
     <div class="container py-5">
         <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="sub-style">
-                <h4 class="sub-title px-3 mb-0">About Us</h4>
+                <h4 class="sub-title px-3 mb-0">Why Choose Us?</h4>
             </div>
-            <h1 class="display-3 mb-4">About ABIC MANPOWER SERVICE CORP</h1>
-            <p>
-                A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exceptional talents with boundless career opportunities across the Philippines. With our determination to implement compulsory labor standards in the Philippines, our team ensures that the proper, updated, and accurate information from Department of Labor and Employment (DOLE) is discussed, explained, and communicated well to our clients. Ensuring that our exceptional talents will receive correct labor due and campaigning competitive package in the market. We are driven by our core ethics of accountability, beyond boundaries, integrity, and customized client-oriented. Through these principles, our inimitable execution of recruitment and selection has been producing clients' satisfactory and advancement of viability given the career choices.
-            </p>
-            <img src="images/logo_cleanup.jpg" class="img-fluid" alt="">
+            <h1 class="display-3 mb-4"> ABIC MANPOWER SERVICE CORP</h1>
+            <div class="row">
+                <div class="col-md-6"> <!-- Increased column width to half of the row -->
+                    <img src="images/logo_cleanup.jpg" class="img-fluid" alt="" width="1200" height="auto">
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exceptional talents with boundless career opportunities across the Philippines. With our determination to implement compulsory labor standards in the Philippines, our team ensures that the proper, updated, and accurate information from Department of Labor and Employment (DOLE) is discussed, explained, and communicated well to our clients. Ensuring that our exceptional talents will receive correct labor due and campaigning competitive package in the market. We are driven by our core ethics of accountability, beyond boundaries, integrity, and customized client-oriented. Through these principles, our inimitable execution of recruitment and selection has been producing clients' satisfactory and advancement of viability given the career choices.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="row g-4 justify-content-center">
             <!-- Feature items here -->
@@ -97,6 +103,92 @@
     </div>
 </div>
 
+
+
+        <!-- About End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0">Our Services</h4>
+                    </div>
+                    <!-- <h1 class="display-3 mb-4">Why Choose Us? Get Your Life Style Back</h1> -->
+    
+                </div>
+                <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row-cols-1 feature-item p-4">
+        <div class="col-12">
+            <div class="feature-icon mb-4">
+                <div class="p-3 d-inline-flex bg-white rounded">
+                    <i class="fas fa-users fa-4x text-primary"></i> <!-- Change icon class here -->
+                </div>
+            </div>
+            <div class="feature-content d-flex flex-column">
+                <h5 class="mb-4">Recruitment Services</h5>
+                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="row-cols-1 feature-item p-4">
+        <div class="col-12">
+            <div class="feature-icon mb-4">
+                <div class="p-3 d-inline-flex bg-white rounded">
+                    <i class="fas fa-building fa-4x text-primary"></i> <!-- Change icon class here -->
+                </div>
+            </div>
+            <div class="feature-content d-flex flex-column">
+                <h5 class="mb-4">Outsourcing</h5>
+                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="row-cols-1 feature-item p-4">
+        <div class="col-12">
+            <div class="feature-icon mb-4">
+                <div class="p-3 d-inline-flex bg-white rounded">
+                    <i class="fas fa-briefcase fa-4x text-primary"></i> <!-- Change icon class here -->
+                </div>
+            </div>
+            <div class="feature-content d-flex flex-column">
+                <h5 class="mb-4">Staffing Solutions</h5>
+                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+    <div class="row-cols-1 feature-item p-4">
+        <div class="col-12">
+            <div class="feature-icon mb-4">
+                <div class="p-3 d-inline-flex bg-white rounded">
+                    <i class="fas fa-handshake fa-4x text-primary"></i> <!-- Change icon class here -->
+                </div>
+            </div>
+            <div class="feature-content d-flex flex-column">
+                <h5 class="mb-4">Direct Hiring</h5>
+                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    
+                    <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
         <!-- Feature End -->
 
 
@@ -104,80 +196,109 @@
         <div class="container-fluid appointment py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                        <div class="section-title text-start">
-                            <h4 class="sub-title pe-3 mb-0">Solutions To Your Pain</h4>
-                            <h1 class="display-4 mb-4">Best Quality Services With Minimal Pain Rate</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                            <div class="row g-4">
-                                <div class="col-sm-6">
-                                    <div class="d-flex flex-column h-100">
-                                        <div class="mb-4">
-                                            <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Body Relaxation</h5>
-                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt qui cupiditate veritatis enim ducimus.</p>
-                                        </div>
-                                        <div class="mb-4">
-                                            <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Body Relaxation</h5>
-                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt qui cupiditate veritatis enim ducimus.</p>
-                                        </div>
-                                        <div class="text-start mb-4">
-                                            <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="video h-100">
-                                        <img src="img/video-img.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                        <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                            <span></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+    <div class="section-title text-start">
+        <h4 class="sub-title pe-3 mb-0">Empowering Your Business</h4>
+        <h1 class="display-4 mb-4">Reliable Manpower Solutions</h1>
+        <p class="mb-4">At Our Manpower Solutions, we specialize in providing reliable and skilled professionals tailored to meet your business needs. Whether you require temporary staffing or permanent placements, we ensure seamless integration into your workforce.</p>
+        <div class="row g-4">
+            <div class="col-sm-6">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-4">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Skilled Professionals</h5>
+                        <p class="mb-0">Our candidates are rigorously screened and trained to deliver high performance in diverse industries.</p>
                     </div>
+                    <div class="mb-4">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Flexible Solutions</h5>
+                        <p class="mb-0">We offer flexible staffing solutions that adapt to your business fluctuations and operational needs.</p>
+                    </div>
+                    <!-- <div class="text-start mb-4">
+                        <a href="tel:+1234567890" class="btn btn-primary rounded-pill text-white py-3 px-5">Contact Us</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="video h-100">
+                    <img src="img/contact.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
+                    <div class="overlay">
+                        <!-- <h5 class="text-white">Contact Us Today!</h5>
+                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                         <div class="appointment-form rounded p-5">
                             <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
-                            <h1 class="display-5 mb-4">Get Appointment</h1>
-                            <form>
-                                <div class="row gy-3 gx-4">
-                                    <div class="col-xl-6">
-                                        <input type="text" class="form-control py-3 border-primary bg-transparent text-white" placeholder="First Name">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="email" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Email">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="phone" class="form-control py-3 border-primary bg-transparent" placeholder="Phone">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
-                                            <option selected>Your Gender</option>
-                                            <option value="1">Male</option>
-                                            <option value="2">FeMale</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="date" class="form-control py-3 border-primary bg-transparent">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
-                                            <option selected>Department</option>
-                                            <option value="1">Physiotherapy</option>
-                                            <option value="2">Physical Helth</option>
-                                            <option value="2">Treatments</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control border-primary bg-transparent text-white" name="text" id="area-text" cols="30" rows="5" placeholder="Write Comments"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
-                                    </div>
-                                </div>
-                            </form>
+                            
+                            <form action="{{ route('contact.store') }}" method="POST">
+    @csrf
+    <h1 class="title text-center mb-4">Talk to Us</h1>
+
+    <!-- Name -->
+    <div class="form-group position-relative">
+        <label for="formName" class="d-block">
+            <i class="icon" data-feather="user"></i>
+        </label>
+        <input type="text" name="name" id="formName" class="form-control form-control-lg thick" placeholder="Full Name" required>
+    </div>
+
+    <!-- Email and Contact Number (2 columns) -->
+    <div class="row">
+        <!-- E-mail -->
+        <div class="form-group col-md-6 position-relative">
+            <label for="formEmail" class="d-block">
+                <i class="icon" data-feather="mail"></i>
+            </label>
+            <input type="email" name="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required>
+        </div>
+
+        <!-- Contact Number -->
+        <div class="form-group col-md-6 position-relative">
+            <label for="formContact" class="d-block">
+                <i class="icon" data-feather="phone"></i>
+            </label>
+            <input type="tel" name="contact_number" id="formContact" class="form-control form-control-lg thick" placeholder="Contact Number" required>
+        </div>
+    </div>
+
+    <!-- Country -->
+    <div class="form-group position-relative">
+        <label for="formCountry" class="d-block">
+            <i class="icon" data-feather="globe"></i>
+        </label>
+        <input type="text" name="country" id="formCountry" class="form-control form-control-lg thick" placeholder="Country" required>
+    </div>
+
+    <!-- Subject -->
+    <div class="form-group position-relative">
+        <label for="formSubject" class="d-block">
+            <i class="icon" data-feather="tag"></i>
+        </label>
+        <select name="subject" id="formSubject" class="form-control form-control-lg thick" required>
+            <option value="" disabled selected>Select Subject</option>
+            <option value="Applicant-Inquiries">Applicant Inquiries</option>
+            <option value="Applicant-Follow Up">Applicant Follow Up</option>
+            <option value="Employer-Inquiries">Employer Inquiries</option>
+            <option value="Employer-Manpower Request">Employer Manpower Request</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group message">
+        <textarea name="message" id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message" required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
+    </div>
+</form>
+
                         </div>
                     </div>
                 </div>
@@ -211,14 +332,14 @@
                     <div class="sub-style">
                         <h4 class="sub-title px-3 mb-0">Meet our team</h4>
                     </div>
-                    <h1 class="display-3 mb-4">Physiotherapy Services from Professional Therapist</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+                    
                 </div>
                 <div class="row g-4 justify-content-center">
+                @foreach($executives as $award)
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item rounded">
                             <div class="team-img rounded-top h-100">
-                                <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <img src="{{ asset('images/' . $award->companyimage) }}" class="img-fluid rounded-top w-100" alt="">
                                 <div class="team-icon d-flex justify-content-center">
                                     <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -227,62 +348,13 @@
                                 </div>
                             </div>
                             <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p class="mb-0">Message Physio Therapist</p>
+                                <h5>{{ $award->companyname }}</h5>
+                                <p class="mb-0">{{ $award->position }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded">
-                            <div class="team-img rounded-top h-100">
-                                <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p class="mb-0">Rehabilitation Therapist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item rounded">
-                            <div class="team-img rounded-top h-100">
-                                <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p class="mb-0">Doctor of Physical therapy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item rounded">
-                            <div class="team-img rounded-top h-100">
-                                <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p class="mb-0">Doctor of Physical therapy</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                   
                 </div>
             </div>
         </div>
@@ -290,143 +362,12 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="section-title mb-5">
-                    <div class="sub-style">
-                        <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
-                    </div>
-                    <h1 class="display-3 mb-4">What Clients are Say</h1>
-                </div>
-                <div class="testimonial-carousel owl-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                            </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                            </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                            </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Testimonial End -->
 
 
         <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Our Blog</h4>
-                    </div>
-                    <h1 class="display-3 mb-4">Excellent Facility and High Quality Therapy</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="blog-item rounded">
-                            <div class="blog-img">
-                                <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="blog-centent p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
-                                    <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
-                                </div>
-                                <a href="#" class="h4">Remove back Pain While Working on o physio</a>
-                                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic consequatur beatae architecto,</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-item rounded">
-                            <div class="blog-img">
-                                <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="blog-centent p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
-                                    <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
-                                </div>
-                                <a href="#" class="h4">Benefits of a weekly physiotherapy session</a>
-                                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic consequatur beatae architecto,</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="blog-item rounded">
-                            <div class="blog-img">
-                                <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="blog-centent p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045</p>
-                                    <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3 Comments</a>
-                                </div>
-                                <a href="#" class="h4">Regular excercise can slow ageing process</a>
-                                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic consequatur beatae architecto,</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         <!-- Blog End -->
 
 

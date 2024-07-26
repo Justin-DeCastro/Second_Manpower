@@ -48,8 +48,8 @@
                                 <div class="video h-100">
                                     <img src="img/contact.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
                                     <div class="overlay">
-                                        <h5 class="text-white">Contact Us Today!</h5>
-                                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p>
+                                        <!-- <h5 class="text-white">Contact Us Today!</h5>
+                                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p> -->
                                     </div>
                                 </div>
                             </div>

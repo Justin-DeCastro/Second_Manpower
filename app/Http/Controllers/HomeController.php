@@ -29,9 +29,11 @@ class HomeController extends Controller
     return view('Home.careers',compact('joboffer'));
   }
   public function about(){
+    $executives = Executives::all();
+    $awards = Award::all();
     $Jobs = Jobfair::all();
     $companies = Company::all();
-    return view('Home.About', compact('companies','Jobs'));
+    return view('Home.About', compact('companies','Jobs','executives','awards'));
   }
   public function service(){
     return view('User.services');
