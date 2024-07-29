@@ -6,7 +6,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Feedback;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class FeedbackController extends Controller
 {
     /**
@@ -16,8 +17,9 @@ class FeedbackController extends Controller
      */
     public function testimonials()
     {
+        $user=User::find(Auth::user()->id);
         $feedback = Feedback::all();
-        return view('admin.testimonials',compact('feedback'));
+        return view('admin.testimonials',compact('feedback','user'));
     }
 
     /**

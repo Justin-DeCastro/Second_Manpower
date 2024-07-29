@@ -12,6 +12,8 @@ use App\Mail\FailedAssigned;
 use App\Mail\NoShowAssigned;
 use App\Mail\NotQualifiedAssigned;
 use App\Mail\PoolingAssigned;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class HiringController extends Controller
 {
     public function searchApplications(Request $request)
@@ -34,8 +36,9 @@ class HiringController extends Controller
 
     public function applications()
     {
+        $user=User::find(Auth::user()->id);
         $applications = Application::all();
-        return view('admin.hiring', ['applications' => $applications]);
+        return view('admin.hiring', compact('applications','user'));
     }
     public function calendar()
     {

@@ -23,20 +23,24 @@ $user=User::find(Auth::user()->id);
  }
  public function Manpower()
  {
+   $user=User::find(Auth::user()->id);
      $manpower = ManpowerReq::all();
      $totalApplies = ManpowerReq::count();
-     return view('admin.manpower', compact('manpower','totalApplies')); // Ensure you have this view file
+     return view('admin.manpower', compact('manpower','totalApplies','user')); // Ensure you have this view file
  }
  public function acreditedcompany(){
+   $user=User::find(Auth::user()->id);
     $companies = Company::all();
-    return view('admin.acredited', compact('companies'));
+    return view('admin.acredited', compact('companies','user'));
  }
  public function jobfair(){
+   $user=User::find(Auth::user()->id);
    $Jobs = Jobfair::all();
-   return view('admin.jobfair',compact('Jobs'));
+   return view('admin.jobfair',compact('Jobs','user'));
 }
  public function calendar(){
+   $user=User::find(Auth::user()->id);
     $interviews = Application::all();
-    return view('admin.calendar',compact('interviews'));
+    return view('admin.calendar',compact('interviews','user'));
  }
 }

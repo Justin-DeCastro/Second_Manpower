@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Award;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class AwardController extends Controller
 {
     public function store(Request $request)
@@ -31,8 +33,9 @@ class AwardController extends Controller
     }
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         // Retrieve all companies
         $awards = Award::all();
-        return view('admin.award', compact('awards'));
+        return view('admin.award', compact('awards','user'));
     }
 }

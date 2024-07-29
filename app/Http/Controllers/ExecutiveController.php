@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Executives;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class ExecutiveController extends Controller
 {
     public function store(Request $request)
@@ -33,8 +35,9 @@ class ExecutiveController extends Controller
     }
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         // Retrieve all companies
         $executives = Executives::all();
-        return view('admin.executive', compact('executives'));
+        return view('admin.executive', compact('executives','user'));
     }
 }

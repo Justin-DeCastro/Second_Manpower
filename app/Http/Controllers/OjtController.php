@@ -5,15 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Ojt;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\InterviewApproval;;
+use App\Mail\InterviewApproval;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class OjtController extends Controller
 {
 
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         $ojt = Ojt::all();
         // Typically used to show the form view
-        return view('admin.ojt',compact('ojt'));
+        return view('admin.ojt',compact('ojt','user'));
     }
 
     public function store(Request $request)

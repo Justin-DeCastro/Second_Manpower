@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Bulletin;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class BulletinController extends Controller
 {
     // Display a listing of bulletins
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         $bulletins = Bulletin::all();
-        return view('admin.bulletin', compact('bulletins'));
+        return view('admin.bulletin', compact('bulletins','user'));
     }
 
     // Show the form for creating a new bulletin

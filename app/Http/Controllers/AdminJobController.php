@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AdminJob;
 use Illuminate\Http\Request;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class AdminJobController extends Controller
 {
     /**
@@ -36,7 +37,8 @@ class AdminJobController extends Controller
     }
     public function index()
 {
+    $user=User::find(Auth::user()->id);
     $joboffer = AdminJob::all();
-return view('admin.adminjob',compact('joboffer'));
+return view('admin.adminjob',compact('joboffer','user'));
 }
 }

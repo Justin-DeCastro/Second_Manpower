@@ -5,16 +5,18 @@ use Illuminate\Http\Request;
 use App\Models\ContactMessage;
 use App\Mail\ProfileMail;
 use Illuminate\Support\Facades\Mail;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 
 use App\Models\Profile;
 class ProfileController extends Controller
 {
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         $profile = Profile::all();
         // Typically used to show the form view
-        return view('admin.profile',compact('profile'));
+        return view('admin.profile',compact('profile','user'));
     }
     public function store(Request $request)
 {

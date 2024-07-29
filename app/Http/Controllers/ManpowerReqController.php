@@ -4,19 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ManpowerReq;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class ManpowerReqController extends Controller
 {
     public function index()
-    {
+    {  
+        $user=User::find(Auth::user()->id);
         $manpower = ManpowerReq::all();
         $totalApplies = ManpowerReq::count();
-        return view('admin.manpower', compact('manpower','totalApplies')); // Ensure you have this view file
+        return view('admin.manpower', compact('manpower','totalApplies','user')); // Ensure you have this view file
     }
 
     public function create()
     {
-        $qualifications = [
+        $qualifications = [ 
             'CPA License' => 'CPA License',
             'National Certificate' => 'National Certificate',
             'Licensed Professional' => 'Licensed Professional'

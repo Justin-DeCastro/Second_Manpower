@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Jobfair;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class JobfairsController extends Controller
 {
     public function store(Request $request)
@@ -33,8 +34,9 @@ class JobfairsController extends Controller
     }
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         // Retrieve all companies
         $Jobs = Jobfair::all();
-        return view('admin.jobfair', compact('Jobs'));
+        return view('admin.jobfair', compact('Jobs','user'));
     }
 }

@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Job;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth; // Add this line
 class JobController extends Controller
 {
     public function index()
     {
+        $user=User::find(Auth::user()->id);
         // Retrieve all companies
         $Jobs = Job::all();
-        return view('admin.acredited', compact('Jobs'));
+        return view('admin.acredited', compact('Jobs','user'));
     }
 
     public function store(Request $request)
