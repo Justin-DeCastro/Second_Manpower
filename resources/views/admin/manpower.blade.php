@@ -87,8 +87,8 @@
                                     </form>
                                 </ul>
                             </li>
-                            
-                           
+
+
 
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
@@ -113,7 +113,7 @@
                                                 <div class="u-text">
                                                     <h4>{{ $user->name }}</h4>
                                                     <p class="text-muted">{{ $user->email }}</p>
-                                                  
+
                                                 </div>
                                             </div>
                                         </li>
@@ -239,38 +239,6 @@
 					<script src="Admin/assets/js/core/popper.min.js"></script>
 					<script src="Admin/assets/js/core/bootstrap.min.js"></script>
 
-					<!-- jQuery Scrollbar -->
-					<script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-					<!-- Moment JS -->
-					<script src="Admin/assets/js/plugin/moment/moment.min.js"></script>
-					<!-- Chart JS -->
-					<script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
-					<!-- jQuery Sparkline -->
-					<script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-					<!-- Chart Circle -->
-					<script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
-					<!-- Datatables -->
-					<script src="Admin/assets/js/plugin/datatables/datatables.min.js"></script>
-					<!-- Bootstrap Notify -->
-					<script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-					<!-- jQuery Vector Maps -->
-					<script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-					<script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
-					<!-- Sweet Alert -->
-					<script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-					<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
-					<!-- Kaiadmin JS -->
-					<script src="Admin/assets/js/kaiadmin.min.js"></script>
-
-					<!-- Kaiadmin DEMO methods, don't include it in your project! -->
-					<script src="Admin/assets/js/setting-demo2.js"></script>
-					<!-- Include jQuery (required by DataTables) -->
-					<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-					<!-- Include DataTables CSS and JS -->
-					<script src="js/dd/datatables.min.js"></script>
-					<script src="js/dd/datatables.js"></script>
 
 					<script>
 						$(document).ready(function () {
@@ -311,6 +279,36 @@
 
 						});
 					</script>
+                    <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+                    <!-- Chart JS -->
+                    <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
+
+                    <!-- jQuery Sparkline -->
+                    <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+                    <!-- Chart Circle -->
+                    <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+                    <!-- Datatables -->
+
+
+                    <!-- Bootstrap Notify -->
+                    <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+                    <!-- jQuery Vector Maps -->
+                    <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+                    <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
+
+                    <!-- Sweet Alert -->
+                    <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+                    <!-- Kaiadmin JS -->
+                    <script src="Admin/assets/js/kaiadmin.min.js"></script>
+
+                    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+                    <script src="Admin/assets/js/setting-demo.js"></script>
+                    <script src="Admin/assets/js/demo.js"></script>
 
 </body>
 
