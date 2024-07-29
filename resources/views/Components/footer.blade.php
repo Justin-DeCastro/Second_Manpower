@@ -4,12 +4,14 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4"><i class="fas fa-star-of-life me-3"></i>Terapia</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem impedit eos autem dolores laudantium quia, qui similique
+                        <h3 class="text-white mb-4">
+        <img src="home/Homeimage/logo-removebg-preview.png" alt="ABIC Manpower Service Corp Logo" class="me-3" style="width: 100px; height: auto;"><br>
+        ABIC Manpower Service Corp
+    </h3>
                             </p>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -19,33 +21,32 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Quick Links</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                            <a href="about"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Contact Us</a> -->
+                            <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a> -->
+                            <a href="bulletin"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
+                            <a href="about"><i class="fas fa-angle-right me-2"></i> Our Team</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Terapia Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> All Services</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Physiotherapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Diagnostics</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Manual Therapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Massage Therapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Rehabilitation</a>
+                            <h4 class="mb-4 text-white">Our Services</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Recruitment Services</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Outsourcing</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Staffing Solutions</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Direct Hiring</a>
+                           
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila"><i class="fa fa-map-marker-alt me-2"></i> Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206 Metro Manila</a>
+                            <a href="mailto:abicmprecruitmenthub1@gmail.com"><i class="fas fa-envelope me-2"></i> abicmprecruitmenthub1@gmail.com</a>
+                            <a href="mailto:abicmprecruitmenthub2@gmail.com"><i class="fas fa-envelope me-2"></i> abicmprecruitmenthub2@gmail.com</a>
+                            <a href="tel:+63 906-938-1261"><i class="fas fa-mobile me-2"></i> +63 906-938-1261</a>
+                            <a href="tel:(02) 8240 5150" class="mb-3"><i class="fas fa-phone me-2"></i>  (02) 8240 5150</a>
                         </div>
                     </div>
                 </div>
@@ -90,6 +91,29 @@
         headerTextColor: "#ffffff"
     };
 </script> -->
+<script>
+    var botman = botmanInit();
+    function botmanInit() {
+        return BotMan.create({
+            baseUrl: '/botman',
+            introMessage: 'Hello! How can I assist you?',
+            chatServer: '/botman',
+            title: 'ChatBot',
+            mainColor: '#408EAF',
+        });
+    }
+</script>
+<script src='/js/widget.js'></script>
+<script>
+    var botmanWidget = {
+        aboutText: "You're currently engaging with an AI",
+        introMessage: "Hello, How Can I Help You?",
+        title: "ABIC MANPOWER SERVICE CORP!",
+        mainColor: "#575757",
+        bubbleAvatarUrl: "{{ asset('img/cs.png') }}",
+        headerTextColor: "#ffffff"
+    };
+</script>
 {{-- <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script> --}}
 <script src="js/element.js"></script>
 <script>

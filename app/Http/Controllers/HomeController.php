@@ -59,6 +59,6 @@ class HomeController extends Controller
     $executives = Executives::all();
     $Jobs = Jobfair::all();
     $awards = Award::all();
-    return view('User.award',compact('awards','Jobs','executives','backends'));
+    return view('home.award',compact('awards','Jobs','executives','backends'));
   }
 }

@@ -114,15 +114,16 @@
                                         <table class="table" id="myDataTable">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
+                                                <th>Email ID</th>
+                                                    <th>Full Name</th>
+                                                    <th>Mobile Number</th>
                                                     <th>Address</th>
-                                                    <th>Status</th>
-                                                    <th>Position</th>
+                                                    <th>Position</th>                                            
                                                     <th>Message</th>
+                                                    <th>Status</th>
                                                     <th>Resume</th>
                                                     <th>For Processing</th>
-                                                    <th>Phone</th>
+                                                  
                                                 </tr>
                                             </thead>
                                         </table>
@@ -149,75 +150,76 @@
 
     <!-- DataTable Initialization -->
     <script>
-        $(document).ready(function() {
-            var table = $('#myDataTable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('get-job-applications') }}",
-                columns: [
-                    { data: 'name', name: 'name' },
-                    { data: 'email', name: 'email' },
-                    { data: 'address', name: 'address' },
-                    { data: 'status', name: 'status' },
-                    { data: 'position', name: 'position' },
-                    { data: 'message', name: 'message' },
-                    { data: 'resume', name: 'resume' },
-                    { data: 'action', name: 'action', orderable: false, searchable: false },
-                    { data: 'phone', name: 'phone' }
-                ],
-                responsive: true,
-                dom: 'Bfrtip',
-                buttons: ['print', 'copy', 'csv'],
-            });
+    $(document).ready(function() {
+        var table = $('#myDataTable').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('get-job-applications') }}",
+            columns: [
+                { data: 'email', name: 'email' }, // Email ID
+                { data: 'name', name: 'name' }, // Full Name
+                { data: 'phone', name: 'phone' }, // Mobile Number
+                { data: 'address', name: 'address' }, // Address
+                { data: 'position', name: 'position' }, // Position
+                { data: 'message', name: 'message' }, // Message
+                { data: 'status', name: 'status' }, // Status
+                { data: 'resume', name: 'resume' }, // Resume
+                { data: 'action', name: 'action', orderable: false, searchable: false } // For Processing
+            ],
+            responsive: true,
+            dom: 'Bfrtip',
+            buttons: ['print', 'copy', 'csv'],
+        });
 
-            $('#printBtn').on('click', function() {
-                table.button('.buttons-print').trigger();
-            });
+        $('#printBtn').on('click', function() {
+            table.button('.buttons-print').trigger();
+        });
 
-            $('#copyBtn').on('click', function() {
-                table.button('.buttons-copy').trigger();
-            });
+        $('#copyBtn').on('click', function() {
+            table.button('.buttons-copy').trigger();
+        });
 
-            $('#excelBtn').on('click', function() {
-                exportToExcel();
-            });
+        $('#excelBtn').on('click', function() {
+            exportToExcel();
+        });
 
-            $('#myDataTable tbody').on('click', 'td', function() {
-                var cell = table.cell(this);
-                var column = cell.index().column;
-                var data = table.row(cell.index().row).data();
+        $('#myDataTable tbody').on('click', 'td', function() {
+            var cell = table.cell(this);
+            var column = cell.index().column;
+            var data = table.row(cell.index().row).data();
 
-                if (column === 6) { // Assuming 'resume' is the 7th column
-                    var resumeUrl = "{{ asset('hiring/') }}/" + data.resume;
-                    // Open resume link in new tab/window as needed
-                }
-            });
-
-            function exportToExcel() {
-                var wb = XLSX.utils.book_new();
-                var ws = XLSX.utils.table_to_sheet($('#myDataTable').get(0));
-
-                table.rows().every(function(index, element) {
-                    var data = this.data();
-                    var resumeUrl = "{{ asset('hiring/') }}/" + data.resume;
-                    var rowIdx = index + 1;
-                    var resumeCell = 'G' + rowIdx;
-
-                    ws[resumeCell] = {
-                        v: "Download Resume",
-                        t: 's',
-                        l: {
-                            Target: resumeUrl,
-                            Tooltip: 'Download Resume'
-                        }
-                    };
-                });
-
-                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-                XLSX.writeFile(wb, "Job_Application_Details.xlsx");
+            if (column === 7) { // Assuming 'resume' is the 8th column
+                var resumeUrl = "{{ asset('hiring/') }}/" + data.resume;
+                // Open resume link in new tab/window as needed
             }
         });
-    </script>
+
+        function exportToExcel() {
+            var wb = XLSX.utils.book_new();
+            var ws = XLSX.utils.table_to_sheet($('#myDataTable').get(0));
+
+            table.rows().every(function(index, element) {
+                var data = this.data();
+                var resumeUrl = "{{ asset('hiring/') }}/" + data.resume;
+                var rowIdx = index + 1;
+                var resumeCell = 'H' + rowIdx; // Updated column index for Resume
+
+                ws[resumeCell] = {
+                    v: "Download Resume",
+                    t: 's',
+                    l: {
+                        Target: resumeUrl,
+                        Tooltip: 'Download Resume'
+                    }
+                };
+            });
+
+            XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+            XLSX.writeFile(wb, "Job_Application_Details.xlsx");
+        }
+    });
+</script>
+
 
     
 </body>

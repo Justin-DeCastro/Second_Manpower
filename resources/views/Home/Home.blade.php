@@ -1,6 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .accordion_one .panel-group {
+    
+    border: 1px solid #f1f1f1;
+    margin-top:100px;
+    
+    
+}
 
+a:link {
+    text-decoration: none
+}
+
+.accordion_one .panel {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 0px solid transparent;
+    border-radius: 0;
+    margin: 0;
+}
+
+.accordion_one .panel-default {
+    border: 0;
+}
+
+.accordion-wrap .panel-heading {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.accordion_one .panel .panel-heading a.collapsed {
+    color: #999999;
+    display: block;
+    padding: 12px 30px;
+    border-top: 0px;
+}
+
+.accordion_one .panel .panel-heading a {
+    display: block;
+    padding: 12px 30px;
+    background: #fff;
+    color: #313131;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.accordion-wrap .panel .panel-heading a {
+    font-size: 14px;
+}
+
+.accordion_one .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0;
+    padding-top: 0;
+    padding: 25px 30px 30px 35px;
+    background: #fff;
+    color: #999999;
+}
+
+.img-accordion {
+    width: 81px;
+    float: left;
+    margin-right: 15px;
+    display: block;
+}
+
+.accordion_one .panel .panel-heading a.collapsed:after {
+    content: "\2b";
+    color: #999999;
+    background: #f1f1f1;
+}
+
+.accordion_one .panel .panel-heading a:after, .accordion_one .panel .panel-heading a.collapsed:after {
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    width: 36px;
+   
+    line-height: 48px;
+    text-align: center;
+    background: #F1F1F1;
+    float: left;
+    margin-left: -31px;
+    margin-top: -12px;
+    margin-right: 15px;
+}
+.accordion_one .panel .panel-heading a:after {
+    content: "\2212";
+}
+
+.accordion_one .panel .panel-heading a:after, .accordion_one .panel .panel-heading a.collapsed:after {
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    width: 36px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #F1F1F1;
+    float: left;
+    margin-left: -31px;
+    margin-top: -12px;
+    margin-right: 15px;
+}
+
+
+</style>
     @include('Components.header')
     <body>
   
@@ -144,86 +251,87 @@
 
         <!-- Feature Start -->
         <div class="container-fluid feature py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Our Services</h4>
+    <div class="container py-5">
+        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style">
+                <h4 class="sub-title px-3 mb-0">Our Services</h4>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-users fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Recruitment Services</h5>
+                            <p class="mb-0">Conducting candidate sourcing, screening, and selection processes to match qualified individuals with job openings.</p>
+                        </div>
                     </div>
-                    <!-- <h1 class="display-3 mb-4">Why Choose Us? Get Your Life Style Back</h1> -->
-    
-                </div>
-                <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-users fa-4x text-primary"></i> <!-- Change icon class here -->
                 </div>
             </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Recruitment Services</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-building fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Outsourcing</h5>
+                            <p class="mb-0">Managing specific business functions or processes on behalf of clients, such as payroll administration or HR management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-briefcase fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Staffing Solutions</h5>
+                            <p class="mb-0">Providing temporary, permanent, or contract staff to meet short-term or long-term workforce needs of businesses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-handshake fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Direct Hiring</h5>
+                            <p class="mb-0">Helping companies find and hire employees directly for their workforce needs.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-building fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Outsourcing</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-briefcase fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Staffing Solutions</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-handshake fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Direct Hiring</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
 
                     
                     <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
                         <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
                     </div> -->
                 </div>
-            </div>
-        </div>
+     
         <!-- Feature End -->
 
 
@@ -466,6 +574,219 @@
     </div>
 </div>
 
+
+<div class="container-fluid appointment py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+    <div class="section-title text-start">
+        <h4 class="sub-title pe-3 mb-0">Empowering Your Business</h4>
+        <h1 class="display-4 mb-4">Reliable Manpower Solutions</h1>
+        <p class="mb-4">At Our Manpower Solutions, we specialize in providing reliable and skilled professionals tailored to meet your business needs. Whether you require temporary staffing or permanent placements, we ensure seamless integration into your workforce.</p>
+        <div class="row g-4">
+            <div class="col-sm-6">
+                <div class="d-flex flex-column h-100">
+                    <div class="mb-4">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Skilled Professionals</h5>
+                        <p class="mb-0">Our candidates are rigorously screened and trained to deliver high performance in diverse industries.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Flexible Solutions</h5>
+                        <p class="mb-0">We offer flexible staffing solutions that adapt to your business fluctuations and operational needs.</p>
+                    </div>
+                    <!-- <div class="text-start mb-4">
+                        <a href="tel:+1234567890" class="btn btn-primary rounded-pill text-white py-3 px-5">Contact Us</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="video h-100">
+                    <img src="img/contact.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
+                    <div class="overlay">
+                        <!-- <h5 class="text-white">Contact Us Today!</h5>
+                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="appointment-form rounded p-5">
+                            <p class="fs-4 text-uppercase text-primary">Frequently Ask Questions</p>
+                            
+                            <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+            <!-- Accordion Item 1 -->
+            <!-- Accordion Item 1 -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            What are the pre-employment requirements?
+        </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <ul>Pre-Employment Requirements
+                <li>SSS E-1 Form and UMID ID</li>
+                <li>Philhealth Number and ID</li>
+                <li>Pag-Ibig Number and ID</li>
+                <li>TIN Number and ID</li>
+                <li>Latest 2X2 picture and 1x1 picture</li>
+                <li>COE or Clearance Certificate</li>
+                <li>School TOR or Diploma</li>
+                <li>NBI Latest 3 months validity (original)</li>
+                <li>PSA or NSO</li>
+            </ul>
+            <ul>Pre-Employment Medical Valid for 6 months (original)
+                <li>(Examination includes Urinalysis, Fecalysis,
+                -Physical Exam, X-Ray, CBC, Drug Test)</li>
+                <li>Vaccination Card</li>
+            </ul>
+            <ul>Note: For Makati based employees
+                <li>Sanitary/Health Permit (Makati)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Do you have an agency fee or any charge for processing?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Contact Details -->
+                        <p>No, we are not charging any fees for the process during employment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Age limit requirement?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Country Information -->
+                        <p>20 to 45 years old Male or Female (older than 45 are subject to screening depending on the experience and positions needed)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    The work location of the jobs?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Subject Details -->
+                        <li>National Capital Region</li>
+                        <li>Luzon</li>
+                        <li>Visayas</li>
+                        <li>Mindanao</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Do you accept part-time employees?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>We are looking for full-time employees that will support the client's operations/business.</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Do you accept PWD?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>Yes, we welcome and accommodate persons with disabilities (PWD).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Do you accept applicants with tattoo?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>Yes, we accept applicants with tattoos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Do you accept walk-ins?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>Yes, you may visit our office located at Unit 403 Campos Rueda Bilding Urban Avenue, Pio Del Pilar, Makati City. Monday through Friday from 9:00 a.m. to 4:00 p.m</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    Office Hours
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>We follow government working hours Monday through Friday at 8 a.m. to 5 p.m.</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    Is the medical expense covered by the company?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Content for Message -->
+                        <p>No, the applicant will shoulder the medical expenses. The applicant can conduct his or her medicals at any clinic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Video -->
+        
         <!-- Blog End -->
 
 
@@ -477,8 +798,7 @@
         <!-- Copyright End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
+       
         
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -491,7 +811,8 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>

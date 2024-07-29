@@ -109,78 +109,80 @@
 
         <!-- Feature Start -->
         <div class="container-fluid feature py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Our Services</h4>
+    <div class="container py-5">
+        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style">
+                <h4 class="sub-title px-3 mb-0">Our Services</h4>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-users fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Recruitment Services</h5>
+                            <p class="mb-0">Conducting candidate sourcing, screening, and selection processes to match qualified individuals with job openings.</p>
+                        </div>
                     </div>
-                    <!-- <h1 class="display-3 mb-4">Why Choose Us? Get Your Life Style Back</h1> -->
-    
-                </div>
-                <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-users fa-4x text-primary"></i> <!-- Change icon class here -->
                 </div>
             </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Recruitment Services</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-building fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Outsourcing</h5>
+                            <p class="mb-0">Managing specific business functions or processes on behalf of clients, such as payroll administration or HR management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-briefcase fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Staffing Solutions</h5>
+                            <p class="mb-0">Providing temporary, permanent, or contract staff to meet short-term or long-term workforce needs of businesses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="col-12" style="flex: 1;">
+                        <div class="feature-icon mb-4">
+                            <div class="p-3 d-inline-flex bg-white rounded">
+                                <i class="fas fa-handshake fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h5 class="mb-4">Direct Hiring</h5>
+                            <p class="mb-0">Helping companies find and hire employees directly for their workforce needs.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-building fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Outsourcing</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-briefcase fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Staffing Solutions</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-    <div class="row-cols-1 feature-item p-4">
-        <div class="col-12">
-            <div class="feature-icon mb-4">
-                <div class="p-3 d-inline-flex bg-white rounded">
-                    <i class="fas fa-handshake fa-4x text-primary"></i> <!-- Change icon class here -->
-                </div>
-            </div>
-            <div class="feature-content d-flex flex-column">
-                <h5 class="mb-4">Direct Hiring</h5>
-                <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-            </div>
-        </div>
-    </div>
-</div>
 
                     
                     <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
@@ -375,25 +377,11 @@
    @include('Components.footer')
         
         <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         <!-- Copyright End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        
 
         
         <!-- JavaScript Libraries -->

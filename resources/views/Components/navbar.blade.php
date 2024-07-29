@@ -1,9 +1,10 @@
 <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+            <a href="/" class="navbar-brand p-0 d-flex align-items-center">
     <img src="home/Homeimage/logo-removebg-preview.png" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;">
     <div>
-        <h1 class="text-primary m-0">ABIC Manpower Service Corp</h1>
+    <h1 class="m-0" style="color:#172A88;">ABIC Manpower Service Corp</h1>
+
         <i>CREATING FUTURE FOR FILIPINO PEOPLE</i>
     </div>
 </a>
@@ -35,9 +36,10 @@
                             </div>
                         </div>
                         <a href="bulletin" class="nav-item nav-link">Bulletin Board</a>
+                        <a href="awards" class="nav-item nav-link">Awards and Achievements</a>
                         <a href="careers" class="nav-item nav-link">Apply Now</a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
+                    <a href="login" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Login</a>
                 </div>
             </nav>
 
@@ -133,8 +135,8 @@
 }
 
 .wrapper a{
-    height:70px;
-    width:70px;
+    height:50px;
+    width:50px;
     background:#000;
     padding:10px;
     display:flex;

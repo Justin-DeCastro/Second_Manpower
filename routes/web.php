@@ -19,6 +19,9 @@ use App\Http\Controllers\BulletinController;
 use App\Http\Controllers\ExecutiveController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\BackendController;
+use App\Http\Controllers\Auth\LoginController;
+
+use App\Http\Controllers\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -130,3 +133,13 @@ Route::get('get-job-applications', [HiringController::class, 'getJobApplications
 //backend
 Route::get('/backend', [BackendController::class, 'index'])->name('backend.index');
 Route::post('/backend-store', [BackendController::class, 'store'])->name('backend.store');
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+//register
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
