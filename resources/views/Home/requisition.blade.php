@@ -254,7 +254,30 @@
     </footer>
 
     <!-- Back to Top -->
-  
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('success'))
+        Swal.fire({
+            title: 'Success!',
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('failed'))
+        Swal.fire({
+            title: 'Failed!',
+            text: '{{ session('failed') }}',
+            icon: 'Failed',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
 
     <!-- External JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

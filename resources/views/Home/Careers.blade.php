@@ -188,6 +188,30 @@
             </div>
         </div>
     </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('success'))
+        Swal.fire({
+            title: 'Success!',
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('failed'))
+        Swal.fire({
+            title: 'Failed!',
+            text: '{{ session('failed') }}',
+            icon: 'Failed',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
 
     @include('Components.footer')
     

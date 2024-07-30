@@ -2,54 +2,36 @@
 <html lang="en">
 
     @include('Components.header')
+    
     <body>
   
         <!-- Spinner Start -->
         @include('Components.spinner')
         <!-- Spinner End -->
-
-
         <!-- Topbar Start -->
         @include('Components.topbar')
        
         <!-- Topbar End -->
-
 
         <!-- Navbar & Hero Start -->
         @include('Components.navbar')
         <!-- Navbar & Hero End -->
 
 
-        <!-- Services Start -->
-       
-
-        <!-- Services End -->
-
-
-        <!-- About Start -->
         <div class="container-fluid about bg-light py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="about-img pb-5 ps-5">
                             <img src="home/homeimage/image8.png" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
-                            <!-- <div class="about-img-inner">
-                                <img src="home/homeimage/logo-removebg-preview.png" class="img-fluid rounded-circle w-100 h-100" alt="Image">
-                            </div> -->
+                           
                             <div class="about-experience">15 years experience</div>
                         </div>
                     </div>
                     <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
     <div class="section-title text-start mb-5">
         <h2>Our Mission Vision and Values</h2>
-        <!-- <h1 class="display-3 mb-4">We are Ready to Help Improve Your Treatment.</h1> -->
-        <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p> -->
-        <!-- <div class="mb-4">
-            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Refreshing to get such a personal touch.</p>
-            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Duis aute irure dolor in reprehenderit in voluptate.</p>
-            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">Discover More</a> -->
+      
     </div>
 
     <div class="mb-5">
@@ -91,9 +73,10 @@
                     <img src="images/logo_cleanup.jpg" class="img-fluid" alt="" width="1200" height="auto">
                 </div>
                 <div class="col-md-6">
-                    <p>
-                        A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exceptional talents with boundless career opportunities across the Philippines. With our determination to implement compulsory labor standards in the Philippines, our team ensures that the proper, updated, and accurate information from Department of Labor and Employment (DOLE) is discussed, explained, and communicated well to our clients. Ensuring that our exceptional talents will receive correct labor due and campaigning competitive package in the market. We are driven by our core ethics of accountability, beyond boundaries, integrity, and customized client-oriented. Through these principles, our inimitable execution of recruitment and selection has been producing clients' satisfactory and advancement of viability given the career choices.
-                    </p>
+                <p style="text-align: justify;">
+    A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exceptional talents with boundless career opportunities across the Philippines. With our determination to implement compulsory labor standards in the Philippines, our team ensures that the proper, updated, and accurate information from Department of Labor and Employment (DOLE) is discussed, explained, and communicated well to our clients. Ensuring that our exceptional talents will receive correct labor due and campaigning competitive package in the market. We are driven by our core ethics of accountability, beyond boundaries, integrity, and customized client-oriented. Through these principles, our inimitable execution of recruitment and selection has been producing clients satisfactory and advancement of viability given the career choices.
+</p>
+
                 </div>
             </div>
         </div>
@@ -236,7 +219,7 @@
                         <div class="appointment-form rounded p-5">
                             <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
                             
-                            <form id="contactForm" action="{{ route('contact.store') }}" method="POST">
+                           <form id="contactForm" action="{{ route('contact.store') }}" method="POST">
     @csrf
     <h1 class="title text-center mb-4">Talk to Us</h1>
 
@@ -356,28 +339,33 @@
                 </div>
             </div>
         </div>
-        <!-- Team End -->
-
-
-        <!-- Testimonial Start -->
-
-        <!-- Testimonial End -->
-
-
-        <!-- Blog Start -->
       
-        <!-- Blog End -->
-
-
-        <!-- Footer Start -->
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('success'))
+        Swal.fire({
+            title: 'Success!',
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    @if(session('failed'))
+        Swal.fire({
+            title: 'Failed!',
+            text: '{{ session('failed') }}',
+            icon: 'Failed',
+            confirmButtonText: 'OK'
+        });
+    @endif
+});
+</script>
    @include('Components.footer')
-        
-        <!-- Copyright Start -->
-      
-        <!-- Copyright End -->
-
-        <!-- Back to Top -->
-        
+    
 
         
         <!-- JavaScript Libraries -->

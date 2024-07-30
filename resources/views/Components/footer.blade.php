@@ -22,9 +22,7 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Quick Links</h4>
                             <a href="about"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Contact Us</a> -->
-                            <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a> -->
+                       
                             <a href="bulletin"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
                             <a href="about"><i class="fas fa-angle-right me-2"></i> Our Team</a>
                         </div>
@@ -59,38 +57,14 @@
                         <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Infinitech Advertising Corporation</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        
                         Designed By <a class="border-bottom" href="#">Infinitech Advertising Corporation</a> 
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-        <!-- <script>
-    var botman = botmanInit();
-    function botmanInit() {
-        return BotMan.create({
-            baseUrl: '/botman',
-            introMessage: 'Hello! How can I assist you?',
-            chatServer: '/botman',
-            title: 'ChatBot',
-            mainColor: '#408EAF',
-        });
-    }
-</script>
-<script src='js/widget.js'></script>
-<script>
-    var botmanWidget = {
-        aboutText: "You're currently engaging with an AI",
-        introMessage: "Hello, How Can I Help You?",
-        title: "ABIC MANPOWER SERVICE CORP!",
-        mainColor: "#575757",
-        bubbleAvatarUrl: "{{ asset('cs.png') }}",
-        headerTextColor: "#ffffff"
-    };
-</script> -->
+      
+
 <script>
     var botman = botmanInit();
     function botmanInit() {
@@ -116,6 +90,11 @@
 </script>
 {{-- <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script> --}}
 <script src="js/element.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
@@ -129,4 +108,3 @@ function googleTranslateElementInit() {
   );
 }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
