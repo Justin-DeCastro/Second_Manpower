@@ -122,17 +122,19 @@ margin-top:200px;
   </thead>
   <tbody>
     <tr>
-      <td class="tg-phtq" rowspan="2">Application Labor Standards</td>
-      <td class="tg-phtq" colspan="2">Retail &amp; Services</td>
-      <td class="tg-phtq" rowspan="2">Non Agricultural/Agricultural</td>
-      <td class="tg-hmp3" rowspan="2">Ref. (Page No.)</td>
+      <b>
+      <td class="tg-phtq" rowspan="2"><b>Application Labor Standards</td></b>
+      <td class="tg-phtq" colspan="2"><b>Retail &amp; Services</td></b>
+      <td class="tg-phtq" rowspan="2"><b>Non Agricultural/Agricultural</td></b>
+      <td class="tg-hmp3" rowspan="2"><b>Ref. (Page No.)</td></b>
     </tr>
+    
     <tr>
       <td class="tg-dvpl">Employing 1 to 5 Workers</td>
       <td class="tg-dvpl">Employing 1 to 9 Workers</td>
     </tr>
     <tr>
-      <td class="tg-phtq">1. Minimum Wage</td>
+      <td class="tg-phtq"><b>1. Minimum Wage</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -145,7 +147,7 @@ margin-top:200px;
       <td class="tg-hmp3">2</td>
     </tr>
     <tr>
-      <td class="tg-phtq">2. Holiday Pay</td>
+      <td class="tg-phtq"><b>2. Holiday Pay</td>
       <td class="tg-ydyv">
         <center>N/A</center>
       </td>
@@ -158,7 +160,7 @@ margin-top:200px;
       <td class="tg-hmp3">14</td>
     </tr>
     <tr>
-      <td class="tg-phtq">3. Premium Pay</td>
+      <td class="tg-phtq"><b>3. Premium Pay</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -171,7 +173,7 @@ margin-top:200px;
       <td class="tg-hmp3">18</td>
     </tr>
     <tr>
-      <td class="tg-phtq">4. Overtime Pay</td>
+      <td class="tg-phtq"><b>4. Overtime Pay</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -184,7 +186,7 @@ margin-top:200px;
       <td class="tg-hmp3">21</td>
     </tr>
     <tr>
-      <td class="tg-phtq">5. Night Shift Differential</td>
+      <td class="tg-phtq"><b>5. Night Shift Differential</td>
       <td class="tg-ydyv">
         <center>N/A</center>
       </td>
@@ -197,7 +199,7 @@ margin-top:200px;
       <td class="tg-hmp3">23</td>
     </tr>
     <tr>
-      <td class="tg-phtq">6. Service Charges</td>
+      <td class="tg-phtq"><b>6. Service Charges</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -210,7 +212,7 @@ margin-top:200px;
       <td class="tg-hmp3">26</td>
     </tr>
     <tr>
-      <td class="tg-phtq">7. Service Incentive Leave</td>
+      <td class="tg-phtq"><b>7. Service Incentive Leave</td>
       <td class="tg-ydyv">
         <center>N/A</center>
       </td>
@@ -223,7 +225,7 @@ margin-top:200px;
       <td class="tg-hmp3">27</td>
     </tr>
     <tr>
-      <td class="tg-phtq">8. Maternity Leave</td>
+      <td class="tg-phtq"><b>8. Maternity Leave</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -236,7 +238,7 @@ margin-top:200px;
       <td class="tg-hmp3">29</td>
     </tr>
     <tr>
-      <td class="tg-phtq">9. Paternity Leave</td>
+      <td class="tg-phtq"><b>9. Paternity Leave</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -249,7 +251,7 @@ margin-top:200px;
       <td class="tg-hmp3">31</td>
     </tr>
     <tr>
-      <td class="tg-phtq">10. Parental Leave</td>
+      <td class="tg-phtq"><b>10. Parental Leave</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -262,7 +264,7 @@ margin-top:200px;
       <td class="tg-hmp3">33</td>
     </tr>
     <tr>
-      <td class="tg-phtq">11. Leave for VAWC</td>
+      <td class="tg-phtq"><b>11. Leave for VAWC</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -275,7 +277,7 @@ margin-top:200px;
       <td class="tg-hmp3">36</td>
     </tr>
     <tr>
-      <td class="tg-phtq">12. Special Leave for Women</td>
+      <td class="tg-phtq"><b>12. Special Leave for Women</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -288,7 +290,7 @@ margin-top:200px;
       <td class="tg-hmp3">38</td>
     </tr>
     <tr>
-      <td class="tg-phtq">13. 13th Month Pay</td>
+      <td class="tg-phtq"><b>13. 13th Month Pay</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -301,7 +303,7 @@ margin-top:200px;
       <td class="tg-hmp3">40</td>
     </tr>
     <tr>
-      <td class="tg-phtq">14. Separation Pay</td>
+      <td class="tg-phtq"><b>14. Separation Pay</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -314,7 +316,7 @@ margin-top:200px;
       <td class="tg-hmp3">45</td>
     </tr>
     <tr>
-      <td class="tg-phtq">15. Retirement Pay</td>
+      <td class="tg-phtq"><b>15. Retirement Pay</td>
       <td class="tg-ydyv">
         <center>N/A</center>
       </td>
@@ -327,7 +329,7 @@ margin-top:200px;
       <td class="tg-hmp3">48</td>
     </tr>
     <tr>
-      <td class="tg-phtq">16. ECC Benefits</td>
+      <td class="tg-phtq"><b>16. ECC Benefits</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -340,7 +342,7 @@ margin-top:200px;
       <td class="tg-hmp3">52</td>
     </tr>
     <tr>
-      <td class="tg-phtq">17. PhilHealth Benefits</td>
+      <td class="tg-phtq"><b>17. PhilHealth Benefits</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -353,7 +355,7 @@ margin-top:200px;
       <td class="tg-hmp3">57</td>
     </tr>
     <tr>
-      <td class="tg-phtq">18. SSS Benefits </td>
+      <td class="tg-phtq"><b>18. SSS Benefits </td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
@@ -366,7 +368,7 @@ margin-top:200px;
       <td class="tg-hmp3">59</td>
     </tr>
     <tr>
-      <td class="tg-phtq">19. Pag-IBIG Benefits</td>
+      <td class="tg-phtq"><b>19. Pag-IBIG Benefits</td>
       <td class="tg-ydyv">
         <center>✔</center>
       </td>

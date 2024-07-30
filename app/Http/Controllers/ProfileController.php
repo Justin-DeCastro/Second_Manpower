@@ -28,8 +28,8 @@ class ProfileController extends Controller
         'phone' => 'required|string|regex:/[0-9]{11}/',
         'position' => 'required|string|max:255',
         'email' => 'required|email',
-        'sec_certificate' => 'required|file',
-        'business_permit' => 'required|file',
+        // 'sec_certificate' => 'required|file',
+        // 'business_permit' => 'required|file',
     ]);
 
     // Handle file uploads (SEC/DTI Certificate and Business Permit)
@@ -39,8 +39,8 @@ class ProfileController extends Controller
     //     // Move to public_path
     //     $secCertificateFile->move(public_path('certificates'), $secCertificateFile->getClientOriginalName());
     // }
-    $request->file('sec_certificate')->move('public/certificates', $request->file('sec_certificate')->getClientOriginalName());
-    $request->file('business_permit')->move('public/permits', $request->file('business_permit')->getClientOriginalName());
+    // $request->file('sec_certificate')->move('public/certificates', $request->file('sec_certificate')->getClientOriginalName());
+    // $request->file('business_permit')->move('public/permits', $request->file('business_permit')->getClientOriginalName());
 
 
     // Store form data in database
@@ -51,8 +51,8 @@ class ProfileController extends Controller
     $contactForm->phone = $validatedData['phone'];
     $contactForm->position = $validatedData['position'];
     $contactForm->email = $validatedData['email'];
-    $contactForm->sec_certificate = $request->file('sec_certificate')->getClientOriginalName();
-    $contactForm->business_permit = $request->file('business_permit')->getClientOriginalName();
+    // $contactForm->sec_certificate = $request->file('sec_certificate')->getClientOriginalName();
+    // $contactForm->business_permit = $request->file('business_permit')->getClientOriginalName();
 
     $contactForm->save();
 

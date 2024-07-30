@@ -59,9 +59,9 @@
 
 
                         <!-- Sign up link -->
-                        <div class="text-center mt-4">
+                        <!-- <div class="text-center mt-4">
                             <p>Don't have an account? <a href="{{ route('register') }}" class="btn btn-outline-primary">Sign up</a></p>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>

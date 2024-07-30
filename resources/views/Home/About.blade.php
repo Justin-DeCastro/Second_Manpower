@@ -236,39 +236,36 @@
                         <div class="appointment-form rounded p-5">
                             <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
                             
-                            <form action="{{ route('contact.store') }}" method="POST">
+                            <form id="contactForm" action="{{ route('contact.store') }}" method="POST">
     @csrf
     <h1 class="title text-center mb-4">Talk to Us</h1>
 
     <!-- Name -->
-    <div class="form-group position-relative">
+    <div class="form-group">
         <label for="formName" class="d-block">
             <i class="icon" data-feather="user"></i>
         </label>
         <input type="text" name="name" id="formName" class="form-control form-control-lg thick" placeholder="Full Name" required>
     </div>
 
-    <!-- Email and Contact Number (2 columns) -->
-    <div class="row">
-        <!-- E-mail -->
-        <div class="form-group col-md-6 position-relative">
-            <label for="formEmail" class="d-block">
-                <i class="icon" data-feather="mail"></i>
-            </label>
-            <input type="email" name="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required>
-        </div>
+    <!-- E-mail -->
+    <div class="form-group">
+        <label for="formEmail" class="d-block">
+            <i class="icon" data-feather="mail"></i>
+        </label>
+        <input type="email" name="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required>
+    </div>
 
-        <!-- Contact Number -->
-        <div class="form-group col-md-6 position-relative">
-            <label for="formContact" class="d-block">
-                <i class="icon" data-feather="phone"></i>
-            </label>
-            <input type="tel" name="contact_number" id="formContact" class="form-control form-control-lg thick" placeholder="Contact Number" required>
-        </div>
+    <!-- Contact Number -->
+    <div class="form-group">
+        <label for="formContact" class="d-block">
+            <i class="icon" data-feather="phone"></i>
+        </label>
+        <input type="tel" name="contact_number" id="formContact" class="form-control form-control-lg thick" placeholder="Contact Number" required>
     </div>
 
     <!-- Country -->
-    <div class="form-group position-relative">
+    <div class="form-group">
         <label for="formCountry" class="d-block">
             <i class="icon" data-feather="globe"></i>
         </label>
@@ -276,7 +273,7 @@
     </div>
 
     <!-- Subject -->
-    <div class="form-group position-relative">
+    <div class="form-group">
         <label for="formSubject" class="d-block">
             <i class="icon" data-feather="tag"></i>
         </label>
@@ -291,7 +288,7 @@
     </div>
 
     <!-- Message -->
-    <div class="form-group message">
+    <div class="form-group">
         <textarea name="message" id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message" required></textarea>
     </div>
 
@@ -300,7 +297,6 @@
         <button type="submit" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
     </div>
 </form>
-
                         </div>
                     </div>
                 </div>

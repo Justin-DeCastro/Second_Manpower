@@ -181,8 +181,8 @@
                                         <th>Person</th> <!-- Example addition based on your fields -->
                                         <th>Phone Number</th>
                                         <th>Position</th> <!-- Example addition based on your fields -->
-                                        <th>SEC Certificate</th> <!-- Example addition based on your fields -->
-                                        <th>Business Permit</th> <!-- Example addition based on your fields -->
+                                        <!-- <th>SEC Certificate</th> 
+                                        <th>Business Permit</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -194,8 +194,8 @@
                                         <td>{{ $prof->person }}</td>
                                         <td>{{ $prof->phone }}</td>
                                         <td>{{ $prof->position }}</td>
-                                        <td><a href="{{ asset('public/certificates/' . $prof->sec_certificate) }}" download>Download SEC Certificate</a></td>
-                                        <td><a href="{{ asset('public/permits/' . basename($prof->business_permit)) }}" download>Download Business Permit</a></td>
+                                        <!-- <td><a href="{{ asset('public/certificates/' . $prof->sec_certificate) }}" download>Download SEC Certificate</a></td>
+                                        <td><a href="{{ asset('public/permits/' . basename($prof->business_permit)) }}" download>Download Business Permit</a></td> -->
 
 
 

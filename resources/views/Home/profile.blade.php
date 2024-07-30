@@ -122,7 +122,7 @@
                                 <input type="text" name="person" id="form_person" class="form-control thick" placeholder="Enter contact person" required>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="icon-label">
                                             <i class="icon" data-feather="file"></i>
@@ -151,7 +151,7 @@
                                         <p class="mt-2">Uploaded Filename: {{ request()->file('business_permit')->getClientOriginalName() }}</p>
                                         @endif
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
 

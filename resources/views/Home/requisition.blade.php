@@ -85,8 +85,9 @@
             <div class="form-group-three">
                 <label for="work_type">Employment Type:</label>
                 <select id="work_type" name="work_type" class="form-control form-control-lg" required>
+                <option value="">Select Employment Type</option>
                     <option value="Full Time">Full Time</option>
-                    <option value="Part Time">Part Time</option>
+                    <!-- <option value="Part Time">Part Time</option> -->
                     <option value="Project Based">Project Based</option>
                     <option value="Contractual">Contractual</option>
                 </select>
@@ -94,7 +95,7 @@
             
             <div class="form-group-three">
                 <label for="vacant_position">Vacant Position:</label>
-                <input type="text" id="vacant_position" name="vacant_position" class="form-control form-control-lg" placeholder="Vacant Position" required>
+                <input type="text" id="vacant_position" name="vacant_position" class="form-control form-control-lg" placeholder="Input Vacant Position here" required>
             </div>
             <div class="form-group-three">
                 <label for="job_category">Job Category:</label>
@@ -112,7 +113,7 @@
             </div>
             <div class="form-group-three">
                 <label for="job_description">Job Description:</label>
-                <textarea id="job_description" name="job_description" class="form-control form-control-lg" rows="4" placeholder="Job Description" required></textarea>
+                <textarea id="job_description" name="job_description" class="form-control form-control-lg" rows="4" placeholder="Input Job Description here" required></textarea>
             </div>
         </div>
         <button type="button" class="btn btn-primary next-btn">Next</button>
@@ -123,20 +124,20 @@
         <h2 class="mb-3">Step 2: Additional Details</h2>
         <div class="form-group-three">
                 <label for="job_requirements">Job Requirements:</label>
-                <textarea id="job_requirements" name="job_requirements" class="form-control" rows="4" placeholder="Job Requirements"></textarea>
+                <textarea id="job_requirements" name="job_requirements" class="form-control" rows="4" placeholder="List the skills, experience, and qualifications required for this position"></textarea>
             </div>
         <div class="form-row-three">
             <div class="form-group-three">
                 <label for="no_of_vacancy">Number of Vacancies:</label>
-                <input type="number" id="no_of_vacancy" name="no_of_vacancy" class="form-control form-control-lg" placeholder="Number of Vacancies" required>
+                <input type="number" id="no_of_vacancy" name="no_of_vacancy" class="form-control form-control-lg" placeholder="Provide details of available job openings here" required>
             </div>
             <div class="form-group-three">
                 <label for="years_experience">Years of Experience Required:</label>
-                <input type="text" id="years_experience" name="years_experience" class="form-control form-control-lg" placeholder="Years of Experience" required>
+                <input type="text" id="years_experience" name="years_experience" class="form-control form-control-lg" placeholder="Specify the number of years of experience needed" required>
             </div>
             <div class="form-group-three">
                 <label for="working_location">Work Location:</label>
-                <input type="text" id="working_location" name="working_location" class="form-control form-control-lg" placeholder="Working Location" required>
+                <input type="text" id="working_location" name="working_location" class="form-control form-control-lg" placeholder="Enter the job's work location or address" required>
             </div>
             <div class="form-group-three">
                     <label for="target_date">Target Date of Deployment:</label>
@@ -152,20 +153,20 @@
         <h2 class="mb-3">Step 3: Additional Details</h2>
         <div class="form-group-three">
                 <label for="working_schedule_hours">Working Schedule Hours:</label>
-                <input type="text" id="working_schedule_hours" name="working_schedule_hours" class="form-control form-control-lg" placeholder="Working Schedule Hours">
+                <input type="text" id="working_schedule_hours" name="working_schedule_hours" class="form-control form-control-lg" placeholder="Specify the work hours  required">
             </div>
             <div class="form-group-three">
                 <label for="working_schedule_days">Working Schedule Days:</label>
-                <input type="text" id="working_schedule_days" name="working_schedule_days" class="form-control form-control-lg" placeholder="Working Schedule Days">
+                <input type="text" id="working_schedule_days" name="working_schedule_days" class="form-control form-control-lg" placeholder="Specify the work days  required">
             </div>
         <div class="form-row-three">
             <div class="form-group-three">
                 <label for="payout_firstdate">First Payout:</label>
-                <input type="text" id="payout_firstdate" name="payout_firstdate" class="form-control form-control-lg" placeholder="First Payout" required>
+                <input type="text" id="payout_firstdate" name="payout_firstdate" class="form-control form-control-lg" placeholder="Enter the date of the first payout" required>
             </div>
             <div class="form-group-three">
                 <label for="payout_seconddate">Second Payout:</label>
-                <input type="text" id="payout_seconddate" name="payout_seconddate" class="form-control form-control-lg" placeholder="Second Payout" required>
+                <input type="text" id="payout_seconddate" name="payout_seconddate" class="form-control form-control-lg" placeholder="Enter the date of the second payout" required>
             </div>
            
         </div>
@@ -177,10 +178,13 @@
     <div class="step" id="step-4" style="display: none;">
         <h2 class="mb-3">Step 4: Final Details</h2>
         <div class="form-row-three">
-            <div class="form-group-three">
-                <label for="screening_method">Screening Method:</label>
-                <input type="text" id="screening_method" name="screening_method" class="form-control form-control-lg" placeholder="Screening Method" required>
-            </div>
+            <class="form-group-three">
+            <label for="screening_method">Screening Method:</label>
+    <select id="screening_method" name="screening_method" class="form-control form-control-lg" required>
+        <option value="" disabled selected>Select Screening Method</option>
+        <option value="face_to_face">Face to Face</option>
+        <option value="virtual">Virtual</option>
+    </select>
           
         </div>
         <div class="form-row-three">
@@ -215,7 +219,7 @@
             </div>
             <div class="form-group-three">
                 <label for="other_requirements">Other Requirements:</label>
-                <textarea id="other_requirements" name="other_requirements" class="form-control" rows="4" placeholder="Other Requirements"></textarea>
+                <textarea id="other_requirements" name="other_requirements" class="form-control" rows="4" placeholder="Specify other requirements"></textarea>
             </div>
         </div>
         <div class="form-row-three">
@@ -246,18 +250,7 @@
         @include('Components.footer')
 
         <!-- Copyright -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
     </footer>
 
     <!-- Back to Top -->

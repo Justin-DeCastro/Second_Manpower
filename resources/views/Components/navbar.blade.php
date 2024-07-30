@@ -1,7 +1,8 @@
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
             <a href="/" class="navbar-brand p-0 d-flex align-items-center">
-    <img src="home/Homeimage/logo-removebg-preview.png" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+    <img src="home/Homeimage/logo-removebg-preview.png" alt="Logo" style="width: 60px; height: 80px; margin-right: 10px;">
     <div>
     <h1 class="m-0" style="color:#172A88;">ABIC Manpower Service Corp</h1>
 
@@ -47,32 +48,22 @@
             <!-- Carousel Start -->
             <div class="header-carousel owl-carousel">
                 <div class="header-carousel-item">
-                    <img src="img/front.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="carousel-caption-content p-3">
-                            <h2 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">ABIC Manpower Service Corp</h2>
-                            <!-- <h1 class="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
-                            <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            </p> -->
-                            <!-- <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Book Appointment</a> -->
-                        </div>
-                    </div>
+                <img src="images/job5.png" width="100" height="auto"  alt="Image">
+
+    
                 </div>
-                <div class="header-carousel-item">
+                <!-- <div class="header-carousel-item">
                     <img src="img/front1.jpg" class="img-fluid w-100" alt="Image">
                     <div class="carousel-caption">
                         <div class="carousel-caption-content p-3">
                             <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">ABIC Manpower Service Corp</h5>
-                            <!-- <h1 class="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
-                            <p class="mb-5 fs-5 animated slideInDown">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            </p> -->
-                            <!-- <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Book Appointment</a> -->
+                           
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- Carousel End -->
-        </div>
+        
         <div class="wrapper">
     <a class="social" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fab fa-facebook fa-2x"></i></a>
     <a class="social" href="#"> <i class="fab fa-telegram fa-2x"></i></i></a>
@@ -81,6 +72,35 @@
 </div>
 <style>
     
+
+
+/* Wrapper for centering text */
+
+
+/* Text styles */
+.text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #333;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 0.15em solid #333; /* Create a cursor effect */
+    animation: typing 6s steps(50, end), blink-caret 0.75s step-end infinite;
+    overflow: hidden; /* Ensure text stays within bounds */
+    width: 0; /* Start width at 0 */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}
 
 .wrapper{
     position:fixed;
