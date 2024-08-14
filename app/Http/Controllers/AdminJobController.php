@@ -5,40 +5,63 @@ namespace App\Http\Controllers;
 use App\Models\AdminJob;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth; // Add this line
+use Illuminate\Support\Facades\Auth;
+
 class AdminJobController extends Controller
 {
-    /**
-     * Store a newly created job in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-
-     public function store(Request $request)
+    public function add(Request $request)
     {
-        // Validate the incoming request data
         $request->validate([
-            'title' => 'required|string|max:255',
-            'location' => 'required|string|max:255',
+            'title' => 'required',
+            'location' => 'required',
         ]);
 
-        // Create a new job instance
         $job = new AdminJob();
         $job->title = $request->title;
         $job->location = $request->location;
-        // Add any additional fields you may have in your Job model
-
-        // Save the job to the database
         $job->save();
 
-        // Redirect back to the previous page with a success message
+        if ($request->ajax()) {
+            return response()->json([
+                'message' => 'Job created successfully!',
+                'job' => $job
+            ]);
+        }
+
         return redirect()->back()->with('success', 'Job created successfully');
     }
+
     public function index()
-{
-    $user=User::find(Auth::user()->id);
-    $joboffer = AdminJob::all();
-return view('admin.adminjob',compact('joboffer','user'));
-}
+    {
+        $user = User::find(Auth::user()->id);
+        $joboffer = AdminJob::all();
+        return view('admin.adminjob', compact('joboffer', 'user'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $job = AdminJob::findOrFail($id);
+        $job->update($request->all());
+
+        if ($request->ajax()) {
+            return response()->json([
+                'message' => 'Job offer updated successfully!',
+                'job' => $job
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Job offer updated successfully!');
+    }
+
+    public function destroy($id)
+    {
+        $job = AdminJob::findOrFail($id);
+        $job->delete();
+
+        if (request()->ajax()) {
+            return response()->json(['message' => 'Job offer deleted successfully!']);
+        }
+
+        return redirect()->back()->with('success', 'Job offer deleted successfully!');
+    }
 }

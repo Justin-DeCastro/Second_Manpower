@@ -2,47 +2,50 @@
 <html lang="en">
 
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Avatars - Kaiadmin Bootstrap 5 Admin Dashboard</title>
-	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="js/dd/datatables.css">
-	<link rel="stylesheet" href="js/dd/datatables.min.css">
-	<!-- Fonts and icons -->
-	<script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
-	<script>
-		WebFont.load({
-			google: { "families"🙁"Public Sans:300,400,500,600,700"},
-			custom: { "families"🙁"Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['Admin/assets/css/fonts.min.css'] },
-			active: function () {
-				sessionStorage.fonts = true;
-			}
-		});
-	</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Dashboard</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
+    
+    <!-- Fonts and icons -->
+    <script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script>
+        WebFont.load({
+            google: { "families": ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                "families": ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+                urls: ['Admin/assets/css/fonts.min.css']
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
+    <link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
+    <link rel="stylesheet" href="Admin/assets/css/demo.css">
 
-
-	<link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
-	<link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
-
-
-	<link rel="stylesheet" href="Admin/assets/css/demo.css">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>
-	<div class="wrapper">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        @include('Components.admin.sidebar')
+        <!-- End Sidebar -->
 
-		@include('Components.admin.sidebar')
-
-
-		<div class="main-panel">
+        <div class="main-panel">
             <div class="main-header">
                 <div class="main-header-logo">
                     <!-- Logo Header -->
                     <div class="logo-header" data-background-color="dark">
                         <a href="index.html" class="logo">
-                            <img src="Admin/assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand"
-                                height="20" />
+                            <img src="Admin/assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
                         </a>
                         <div class="nav-toggle">
                             <button class="btn btn-toggle toggle-sidebar">
@@ -58,25 +61,13 @@
                     </div>
                     <!-- End Logo Header -->
                 </div>
+                
                 <!-- Navbar Header -->
                 <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
                     <div class="container-fluid">
-                        <!-- <nav
-                            class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button type="submit" class="btn btn-search pe-1">
-                                        <i class="fa fa-search search-icon"></i>
-                                    </button>
-                                </div>
-                                <input type="text" placeholder="Search ..." class="form-control" />
-                            </div>
-                        </nav> -->
-
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
                             <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                    role="button" aria-expanded="false" aria-haspopup="true">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-search animated fadeIn">
@@ -87,44 +78,25 @@
                                     </form>
                                 </ul>
                             </li>
-
-
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
-                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
-                                    aria-expanded="false">
+                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                                     <div class="avatar-sm">
-                                        <img src="images/logo-removebg-preview.png" alt="..."
-                                            class="avatar-img rounded-circle" />
+                                        <img src="images/logo-removebg-preview.png" alt="..." class="avatar-img rounded-circle" />
                                     </div>
-                                    <span class="profile-username">
-                                        <span class="op-7">Hi,</span>
-                                        <span class="fw-bold">{{ $user->name }}</span>
-                                    </span>
+                                    <span class="profile-username"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user animated fadeIn">
                                     <div class="dropdown-user-scroll scrollbar-outer">
                                         <li>
                                             <div class="user-box">
                                                 <div class="avatar-lg">
-                                                    <img src="images/logo-removebg-preview.png" alt="image profile"
-                                                        class="avatar-img rounded" />
+                                                    <img src="images/logo-removebg-preview.png" alt="image profile" class="avatar-img rounded" />
                                                 </div>
-                                                <div class="u-text">
-                                                    <h4>{{ $user->name }}</h4>
-                                                    <p class="text-muted">{{ $user->email }}</p>
-
-                                                </div>
+                                                <div class="u-text"></div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="dropdown-divider"></div>
-                                            <!-- <a class="dropdown-item" href="#">My Profile</a>
-                                            <a class="dropdown-item" href="#">My Balance</a>
-                                            <a class="dropdown-item" href="#">Inbox</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Account Setting</a>
-                                            <div class="dropdown-divider"></div> -->
                                             <a class="dropdown-item" href="logout">Logout</a>
                                         </li>
                                     </div>
@@ -136,216 +108,193 @@
                 <!-- End Navbar -->
             </div>
 
-			<div class="container">
-				<div class="page-inner">
-					<div class="page-header d-flex justify-content-between align-items-center">
-						<ul class="breadcrumbs mb-3">
-							<!-- Breadcrumb items can be added here if needed -->
-						</ul>
+            <div class="container">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h3 class="fw-bold mb-3"></h3>
+                        <ul class="breadcrumbs mb-3">
+                            <!-- Breadcrumbs -->
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Profile Details</h4>
+                                    <button type="button" class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                        Click to add profile
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered" id="myDataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Executive Name</th>
+                                                    <th>Executive Position</th>
+                                                    <th>Executive Image</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($executives as $executive)
+                                                    <tr>
+                                                        <td>{{ $executive->companyname }}</td>
+                                                        <td>{{ $executive->position }}</td>
+                                                        <td>
+                                                            @if ($executive->companyimage)
+                                                                <a href="{{ asset($executive->companyimage) }}" data-lightbox="executive-images" data-title="{{ $executive->companyname }}">
+                                                                    <img src="{{ asset($executive->companyimage) }}" alt="{{ $executive->companyname }}" width="220" height="120">
+                                                                </a>
+                                                            @else
+                                                                <p>No image available</p>
+                                                            @endif
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-warning btn-sm update-btn" data-bs-toggle="modal" data-bs-target="#updateModal{{ $executive->id }}" data-id="{{ $executive->id }}" data-companyname="{{ $executive->companyname }}" data-position="{{ $executive->position }}" data-companyimage="{{ $executive->companyimage }}">
+                                                                Update
+                                                            </button>
+                                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteManpowerModal{{ $executive->id }}">
+                                                                Delete
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-					</div>
-					<div>
-						<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-							data-bs-target="#uploadModal">
-							Upload Company Details
-						</button>
-					</div>
-					<div class="row">
-						<div class="col-md-10">
-							<div class="card">
-								<div class="card-header">
-									<h4 class="card-title">Uploaded Awards</h4>
-									<div class="dt-buttons btn-group d-flex justify-content-end gap-2 ">
-										<div class="dropdown">
-											<button type="button" class="btn btn-primary dropdown-toggle"
-												data-bs-toggle="dropdown" aria-expanded="false">
-												<i class='bx bx-export'></i> Export
-											</button>
-											<ul class="dropdown-menu">
-												<li><button type="button" id="copyBtn" class="btn dropdown-item"><i
-															class='bx bx-copy'></i> Copy</button></li>
-												<li><button type="button" id="printBtn" class="btn dropdown-item"><i
-															class='bx bx-printer'></i> Print</button></li>
-												<li><button type="button" id="excelBtn" class="btn dropdown-item"><i
-															class='bx bx-file'></i>Excel</button></li>
-												<li><button type="button" id="pdfBtn" class="btn dropdown-item"><i
-															class='bx bxs-file-pdf'></i> Pdf</button></li>
-											</ul>
-										</div>
-										<div class="dropdown">
+            <!-- Add Profile Modal -->
+            <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="uploadModalLabel">Upload Executive Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="{{ route('executive.store') }}" enctype="multipart/form-data" id="uploadForm">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label">Executive Name</label>
+                                    <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter executive name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="position" class="form-label">Executive Position</label>
+                                    <input type="text" class="form-control" id="position" name="position" placeholder="Enter position">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="companyImage" class="form-label">Executive Image</label>
+                                    <input type="file" class="form-control" id="companyImage" name="companyimage">
+                                    <div id="fileSizeWarning" style="color: red; display: none; margin-top: 10px;">
+                                        The file size exceeds 10MB. Please choose a smaller file.
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Executive Details</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Update Profile Modal (Example) -->
+            @foreach($executives as $executive)
+            <div class="modal fade" id="updateModal{{ $executive->id }}" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel{{ $executive->id }}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="updateModalLabel{{ $executive->id }}">Update Executive Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="{{ route('executives.update', $executive->id) }}" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="mb-3">
+                                    <label for="updateCompanyName{{ $executive->id }}" class="form-label">Executive Name</label>
+                                    <input type="text" class="form-control" id="updateCompanyName{{ $executive->id }}" name="companyname" value="{{ $executive->companyname }}" placeholder="Enter executive name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="updatePosition{{ $executive->id }}" class="form-label">Executive Position</label>
+                                    <input type="text" class="form-control" id="updatePosition{{ $executive->id }}" name="position" value="{{ $executive->position }}" placeholder="Enter position">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="updateCompanyImage{{ $executive->id }}" class="form-label">Executive Image</label>
+                                    <input type="file" class="form-control" id="updateCompanyImage{{ $executive->id }}" name="companyimage">
+                                    <div id="updateFileSizeWarning{{ $executive->id }}" style="color: red; display: none; margin-top: 10px;">
+                                        The file size exceeds 10MB. Please choose a smaller file.
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Executive Details</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
 
-										</div>
+            <!-- Delete Profile Modal (Example) -->
+            @foreach($executives as $executive)
+            <div class="modal fade" id="deleteManpowerModal{{ $executive->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteManpowerModalLabel{{ $executive->id }}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteManpowerModalLabel{{ $executive->id }}">Delete Executive</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete this executive?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <form method="POST" action="{{ route('executives.destroy', $executive->id) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 
+    <!-- JS Files -->
+    <script src="Admin/assets/js/core/jquery.3.6.0.min.js"></script>
+    <script src="Admin/assets/js/core/popper.min.js"></script>
+    <script src="Admin/assets/js/core/bootstrap.min.js"></script>
+    <script src="Admin/assets/js/plugin/datatables/jquery.dataTables.min.js"></script>
+    <script src="Admin/assets/js/plugin/datatables/dataTables.bootstrap5.min.js"></script>
+    <script src="Admin/assets/js/plugin/lightbox2/lightbox.min.js"></script>
+    <script src="Admin/assets/js/atlantis.min.js"></script>
+    
+    <!-- DataTable Initialization -->
+    <script>
+        $(document).ready(function() {
+            $('#myDataTable').DataTable({
+                "pagingType": "full_numbers"
+            });
 
-
-									</div>
-									<div class="card-body">
-										<div class="table-responsive">
-											<table class="table table-striped table-bordered datatable"
-												id="myDataTable">
-												<thead>
-													<tr>
-														<th>Executive Name</th>
-														<th>Executive Position</th>
-														<th>Executive Award</th>
-
-														<th>Executive Image</th>
-													</tr>
-												</thead>
-												<tbody>
-													@foreach($executives as $award)
-														<tr>
-															<td>{{ $award->companyname }}</td>
-															<td>{{ $award->position }}</td>
-															<td>{{ $award->awards }}</td>
-
-															<td>
-																@if ($award->companyimage)
-																	<img src="{{ asset('images/' . $award->companyimage) }}"
-																		alt="{{ $award->companyname }}" width="220"
-																		height="120">
-																@else
-																	<p>No image available</p>
-																@endif
-															</td>
-														</tr>
-													@endforeach
-
-
-												</tbody>
-
-
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-
-						<!-- Add this code inside the <body> tag, preferably after the main panel div -->
-						<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
-							aria-labelledby="uploadModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="uploadModalLabel">Upload Executive Details</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal"
-											aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<form method="POST" action="{{ route('executive.store') }}"
-											enctype="multipart/form-data">
-											@csrf
-											<div class="mb-3">
-												<label for="companyName" class="form-label">Executive Name</label>
-												<input type="text" class="form-control" id="companyName"
-													name="companyname" placeholder="Enter description name">
-											</div>
-											<div class="mb-3">
-												<label for="position" class="form-label">Executive Position</label>
-												<input type="text" class="form-control" id="position"
-													name="position" placeholder="Enter position">
-											</div>
-											<div class="mb-3">
-												<label for="awards" class="form-label">Awards</label>
-												<input type="text" class="form-control" id="awards" name="awards"
-													placeholder="Enter awards">
-											</div>
-
-											<div class="mb-3">
-												<label for="companyImage" class="form-label">Executive Image</label>
-												<input type="file" class="form-control" id="companyImage"
-													name="companyimage">
-											</div>
-											<button type="submit" class="btn btn-primary">Save Company Details</button>
-										</form>
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-
-
-
-
-                        <script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
-                        <script src="Admin/assets/js/core/popper.min.js"></script>
-                        <script src="Admin/assets/js/core/bootstrap.min.js"></script>
-						<script>
-							$(document).ready(function () {
-
-								var dataTable = $('#myDataTable').DataTable({
-
-									responsive: true, // Enable Responsive extension
-									inlineEditing: true,
-
-									buttons: [
-										'print', 'copy', 'csv', 'pdf'
-									],
-
-									"language": {
-										"search": "Search: ",
-										"searchPlaceholder": "Search here..."
-									}
-								});
-								// responsive: true
-								// autoFill: true
-
-								// Button click events
-								$('#printBtn').on('click', function () {
-									dataTable.button('.buttons-print').trigger();
-								});
-								$('#copyBtn').on('click', function () {
-									dataTable.button('.buttons-copy').trigger();
-								});
-
-								$('#excelBtn').on('click', function () {
-									dataTable.button('.buttons-csv').trigger();
-								});
-
-								$('#pdfBtn').on('click', function () {
-									dataTable.button('.buttons-pdf').trigger();
-								});
-
-
-							});
-						</script>
- <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
- <!-- Chart JS -->
- <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
-
- <!-- jQuery Sparkline -->
- <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
- <!-- Chart Circle -->
- <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
-
- <!-- Datatables -->
-
-
- <!-- Bootstrap Notify -->
- <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
- <!-- jQuery Vector Maps -->
- <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
- <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
-
- <!-- Sweet Alert -->
- <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
- <!-- Kaiadmin JS -->
- <script src="Admin/assets/js/kaiadmin.min.js"></script>
-
- <!-- Kaiadmin DEMO methods, don't include it in your project! -->
- <script src="Admin/assets/js/setting-demo.js"></script>
- <script src="Admin/assets/js/demo.js"></script>
-
+            // File Size Validation
+            $('#uploadForm').on('submit', function(e) {
+                var fileInput = $('#companyImage')[0];
+                var file = fileInput.files[0];
+                if (file && file.size > 10 * 1024 * 1024) { // 10MB
+                    e.preventDefault();
+                    $('#fileSizeWarning').show();
+                } else {
+                    $('#fileSizeWarning').hide();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

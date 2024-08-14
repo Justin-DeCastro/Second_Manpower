@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Login</title>
     <style>
+       
         .divider:after,
         .divider:before {
             content: "";
@@ -14,17 +15,34 @@
             height: 1px;
             background: #eee;
         }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a slight white background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-container img {
+            max-width: 70%;
+            height: auto;
+            margin-bottom: 50px; /* Adjust as needed */
+        }
+        .form-container form {
+            width: 70%;
+        }
     </style>
 </head>
 <body>
-    <section class="vh-100">
+    <section class="vh-100 d-flex align-items-center">
         <div class="container py-5 h-100">
             <div class="row d-flex align-items-center justify-content-center h-100">
-                <div class="col-md-8 col-lg-7 col-xl-6">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                <div class="col-md-8 col-lg-7 col-xl-6 form-container">
+                    <img src="images/no.jpg"
                         class="img-fluid" alt="Phone image">
-                </div>
-                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+
+                        <h6> Welcome! Sign in to your account. </h6>
+                        <br>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -46,17 +64,8 @@
                             @enderror
                         </div>
 
-                        <div class="d-flex justify-content-around align-items-center mb-4">
-                            <!-- Checkbox -->
-                           
-                            
-                        </div>
-
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-
-                     
-
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #283891">Sign in</button>
 
                         <!-- Sign up link -->
                         <!-- <div class="text-center mt-4">

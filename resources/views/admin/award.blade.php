@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Avatars - Kaiadmin Bootstrap 5 Admin Dashboard</title>
-	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon"/>
-	<link rel="stylesheet" href="js/dd/datatables.css">
-	<link rel="stylesheet" href="js/dd/datatables.min.css">
-	<!-- Fonts and icons -->
-	<script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
-	<script>
-		WebFont.load({
-			google: {"families"🙁"Public Sans:300,400,500,600,700"},
-			custom: {"families"🙁"Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['Admin/assets/css/fonts.min.css']},
-			active: function() {
-				sessionStorage.fonts = true;
-			}
-		});
-	</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
 
+    <!-- Fonts and icons -->
+    <script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Public Sans:300,400,500,600,700"]
+            },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["Admin/assets/css/fonts.min.css"],
+            },
+            active: function() {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Admin/assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css" />
 
-	<link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
-	<link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
-
-
-	<link rel="stylesheet" href="Admin/assets/css/demo.css">
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="Admin/assets/css/demo.css" />
 </head>
+
 <body>
-	<div class="wrapper">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        @include('Components.admin.sidebar')
+        <!-- End Sidebar -->
 
-	@include('Components.admin.sidebar')
-
-
-	<div class="main-panel">
+        <div class="main-panel">
             <div class="main-header">
                 <div class="main-header-logo">
                     <!-- Logo Header -->
@@ -85,8 +96,8 @@
                                     </form>
                                 </ul>
                             </li>
-
-
+                            
+                           
 
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
@@ -111,10 +122,84 @@
                                                 <div class="u-text">
                                                     <h4>{{ $user->name }}</h4>
                                                     <p class="text-muted">{{ $user->email }}</p>
-
+                                                  
                                                 </div>
                                             </div>
                                         </li>
+                                      <li>
+    <div class="user-box">
+        <div class="avatar-lg">
+          
+            <video src="VideoTutorial/VideoTutorial.mp4" alt="video profile" class="avatar-img rounded" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="u-text">
+            <h4>Video Tutorial</h4>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/UsersManual.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Users Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/Admin.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Admin Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+
+
+
                                         <li>
                                             <div class="dropdown-divider"></div>
                                             <!-- <a class="dropdown-item" href="#">My Profile</a>
@@ -134,51 +219,26 @@
                 <!-- End Navbar -->
             </div>
 
-			<div class="container">
-                <div class="page-inner">
-                    <div class="page-header d-flex justify-content-between align-items-center">
-                        <ul class="breadcrumbs mb-3">
-                            <!-- Breadcrumb items can be added here if needed -->
-                        </ul>
-                        <div>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                Upload Company Details
+            <div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Upload Award</h3>
+            <ul class="breadcrumbs mb-3">
+                <!-- Breadcrumbs -->
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                Upload Award Details
                             </button>
-                        </div>
                     </div>
-                    <div class="row">
-    <div class="col-md-10">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Uploaded Awards</h4>
-				<div class="dt-buttons btn-group d-flex justify-content-end gap-2 ">
-										<div class="dropdown">
-											<button type="button" class="btn btn-primary dropdown-toggle"
-												data-bs-toggle="dropdown" aria-expanded="false">
-												<i class='bx bx-export'></i> Export
-											</button>
-											<ul class="dropdown-menu">
-												<li><button type="button" id="copyBtn" class="btn dropdown-item"><i
-															class='bx bx-copy'></i> Copy</button></li>
-												<li><button type="button" id="printBtn" class="btn dropdown-item"><i
-															class='bx bx-printer'></i> Print</button></li>
-												<li><button type="button" id="excelBtn" class="btn dropdown-item"><i
-															class='bx bx-file'></i>Excel</button></li>
-												<li><button type="button" id="pdfBtn" class="btn dropdown-item"><i
-															class='bx bxs-file-pdf'></i> Pdf</button></li>
-											</ul>
-										</div>
-										<div class="dropdown">
-
-
-										</div>
-
-
-
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered datatable"  id="myDataTable">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered datatable"  id="myDataTable">
                         <thead>
                             <tr>
                                 <th>Company Name</th>
@@ -206,6 +266,8 @@
 
 
                     </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,8 +275,7 @@
 </div>
 
 
-
-<!-- Add this code inside the <body> tag, preferably after the main panel div -->
+    <!-- Add Job Modal -->
     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -248,83 +309,85 @@
 
 
 
+    <!-- End Add Job Modal -->
+
+    <!-- Scripts -->
+
+    <script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="Admin/assets/js/core/popper.min.js"></script>
+    <script src="Admin/assets/js/core/bootstrap.min.js"></script>
 
 
-	<script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
-	<script src="Admin/assets/js/core/popper.min.js"></script>
-	<script src="Admin/assets/js/core/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var dataTable = $('#myDataTable').DataTable({
+
+                responsive: true, // Enable Responsive extension
+                inlineEditing: true,
+
+                buttons: [
+                    'print', 'copy', 'csv', 'pdf'
+                ],
+
+                "language": {
+                    "search": "Search: ",
+                    "searchPlaceholder": "Search here..."
+                }
+            });
+            // responsive: true
+            // autoFill: true
+
+            // Button click events
+            $('#printBtn').on('click', function () {
+                dataTable.button('.buttons-print').trigger();
+            });
+            $('#copyBtn').on('click', function () {
+                dataTable.button('.buttons-copy').trigger();
+            });
+
+            $('#excelBtn').on('click', function () {
+                dataTable.button('.buttons-csv').trigger();
+            });
+
+            $('#pdfBtn').on('click', function () {
+                dataTable.button('.buttons-pdf').trigger();
+            });
 
 
+        });
+    </script>
+    <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
 
 
-					<script>
-						$(document).ready(function () {
+    <!-- Bootstrap Notify -->
+    <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-							var dataTable = $('#myDataTable').DataTable({
+    <!-- jQuery Vector Maps -->
+    <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
 
-								responsive: true, // Enable Responsive extension
-								inlineEditing: true,
+    <!-- Sweet Alert -->
+    <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-								buttons: [
-									'print', 'copy', 'csv', 'pdf'
-								],
+    <!-- Kaiadmin JS -->
+    <script src="Admin/assets/js/kaiadmin.min.js"></script>
 
-								"language": {
-									"search": "Search: ",
-									"searchPlaceholder": "Search here..."
-								}
-							});
-							// responsive: true
-							// autoFill: true
-
-							// Button click events
-							$('#printBtn').on('click', function () {
-								dataTable.button('.buttons-print').trigger();
-							});
-							$('#copyBtn').on('click', function () {
-								dataTable.button('.buttons-copy').trigger();
-							});
-
-							$('#excelBtn').on('click', function () {
-								dataTable.button('.buttons-csv').trigger();
-							});
-
-							$('#pdfBtn').on('click', function () {
-								dataTable.button('.buttons-pdf').trigger();
-							});
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="Admin/assets/js/setting-demo.js"></script>
+    <script src="Admin/assets/js/demo.js"></script>
 
 
-						});
-					</script>
-                    <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-                    <!-- Chart JS -->
-                    <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
-
-                    <!-- jQuery Sparkline -->
-                    <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-                    <!-- Chart Circle -->
-                    <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
-
-                    <!-- Datatables -->
-
-
-                    <!-- Bootstrap Notify -->
-                    <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-                    <!-- jQuery Vector Maps -->
-                    <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-                    <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
-
-                    <!-- Sweet Alert -->
-                    <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
-                    <!-- Kaiadmin JS -->
-                    <script src="Admin/assets/js/kaiadmin.min.js"></script>
-
-                    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-                    <script src="Admin/assets/js/setting-demo.js"></script>
-                    <script src="Admin/assets/js/demo.js"></script>
 </body>
 </html>
