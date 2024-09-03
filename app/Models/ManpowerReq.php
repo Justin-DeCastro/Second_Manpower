@@ -10,6 +10,10 @@ class ManpowerReq extends Model
     use HasFactory;
 
     protected $fillable = [
+         'company_website',
+          'company_name',
+          'contact_name',
+           'contact_number',
         'work_type',
         'vacant_position',
         'job_category',

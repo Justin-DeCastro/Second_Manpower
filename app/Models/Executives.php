@@ -10,7 +10,7 @@ class Executives extends Model
     use HasFactory;
     protected $fillable = [
         'companyname',
-        'awards',
+ 
         'position',
 
         'companyimage',

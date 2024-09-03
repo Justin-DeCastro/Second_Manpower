@@ -20,7 +20,7 @@
 		});
 	</script>
 
-
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
 	<link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
 	<link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">

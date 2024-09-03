@@ -2,12 +2,12 @@
 <html lang="en">
 
 
-
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
 <body>
     @include('Components.header')
 
     <!-- Spinner Start -->
-    @include('Components.spinner')
+    <!--@include('Components.spinner')-->
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
@@ -45,38 +45,87 @@
         </div>
     </div>
 
-    <!-- Team Start -->
-    <div class="container-fluid team py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Meet our team</h4>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                @foreach($executives as $award)
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="{{ asset('images/' . $award->companyimage) }}" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>{{ $award->companyname }}</h5>
-                            <p class="mb-0">{{ $award->position }}</p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
+<!--   <div class="container-fluid team py-5">-->
+<!--    <div class="container py-5">-->
+<!--        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--            <div class="sub-style">-->
+<!--                <h4 class="sub-title px-3 mb-0">Meet Our Team</h4>-->
+<!--            </div>-->
+<!--        </div>-->
 
+        
+<!--        <div class="row g-4 justify-content-center">-->
+<!--            @foreach($executives as $executive)-->
+<!--                @if($executive->position === 'CEO')-->
+<!--                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                    <div class="team-item rounded h-100">-->
+<!--                        <div class="team-img rounded-top" style="height: 350px; overflow: hidden;">-->
+                           
+<!--                            <img src="{{ asset($executive->companyimage) }}" class="img-fluid w-100 h-100 object-cover" alt="{{ $executive->companyname }}" onerror="this.src='/path/to/default-image.jpg';">-->
+<!--                        </div>-->
+<!--                        <div class="team-content rounded-bottom bg-light p-4 d-flex flex-column">-->
+<!--                            <div class="team-content-inner flex-grow-1 text-center">-->
+<!--                                <h5>{{ $executive->companyname }}</h5>-->
+<!--                                <p class="mb-0">{{ $executive->position }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                @endif-->
+<!--            @endforeach-->
+<!--        </div>-->
+
+  
+<!--        <div class="row g-4 justify-content-center">-->
+<!--            @foreach($executives as $executive)-->
+<!--                @if($executive->position === 'PRESIDENT')-->
+<!--                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                    <div class="team-item rounded h-100">-->
+<!--                        <div class="team-img rounded-top" style="height: 350px; overflow: hidden;">-->
+                            <!-- Display image for President -->
+<!--                            <img src="{{ asset($executive->companyimage) }}" class="img-fluid w-100 h-100 object-cover" alt="{{ $executive->companyname }}" onerror="this.src='/path/to/default-image.jpg';">-->
+<!--                        </div>-->
+<!--                        <div class="team-content rounded-bottom bg-light p-4 d-flex flex-column">-->
+<!--                            <div class="team-content-inner flex-grow-1 text-center">-->
+<!--                                <h5>{{ $executive->companyname }}</h5>-->
+<!--                                <p class="mb-0">{{ $executive->position }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                @endif-->
+<!--            @endforeach-->
+<!--        </div>-->
+
+
+<!--     <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--            <div class="sub-style">-->
+<!--                <h4 class="sub-title px-3 mb-0">Other Team Members</h4>-->
+<!--            </div>-->
+<!--        <div class="row g-4 justify-content-center">-->
+<!--            @foreach($executives as $executive)-->
+<!--                @if($executive->position !== 'CEO' && $executive->position !== 'PRESIDENT')-->
+<!--                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                    <div class="team-item rounded h-100">-->
+<!--                        <div class="team-img rounded-top" style="height: 350px; overflow: hidden;">-->
+                            <!-- Display image for other team members -->
+<!--                            <img src="{{ asset($executive->companyimage) }}" class="img-fluid w-100 h-100 object-cover" alt="{{ $executive->companyname }}" onerror="this.src='/path/to/default-image.jpg';">-->
+<!--                        </div>-->
+<!--                        <div class="team-content rounded-bottom bg-light p-4 d-flex flex-column">-->
+<!--                            <div class="team-content-inner flex-grow-1 text-center">-->
+<!--                                <h5>{{ $executive->companyname }}</h5>-->
+<!--                                <p class="mb-0">{{ $executive->position }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                @endif-->
+<!--            @endforeach-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</div>-->
 
     <!-- Footer Start -->
     @include('Components.footer')

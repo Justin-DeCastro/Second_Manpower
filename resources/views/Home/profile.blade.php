@@ -6,7 +6,7 @@
     <title>Company Profile</title>
     <!-- External CSS -->
    
-</head>
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
 <body>
 
     <!-- Header -->
@@ -22,40 +22,45 @@
     @include('Components.navbar')
 
     <!-- Main Content -->
-    <div class="container-fluid appointment py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <!-- Left Column: Reliable Manpower Solutions -->
-                <div class="col-lg-6">
-                    <div class="section-title text-start">
-                        <h4 class="sub-title pe-3 mb-0">Empowering Your Business</h4>
-                        <h1 class="display-4 mb-4">Reliable Manpower Solutions</h1>
-                        <p class="mb-4">At Our Manpower Solutions, we specialize in providing reliable and skilled professionals tailored to meet your business needs. Whether you require temporary staffing or permanent placements, we ensure seamless integration into your workforce.</p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Skilled Professionals</h5>
-                                        <p class="mb-0">Our candidates are rigorously screened and trained to deliver high performance in diverse industries.</p>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Flexible Solutions</h5>
-                                        <p class="mb-0">We offer flexible staffing solutions that adapt to your business fluctuations and operational needs.</p>
-                                    </div>
+  <div class="container-fluid appointment py-5">
+    <div class="container py-5">
+        <div class="row">
+            <!-- Career Updates Section -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                @foreach($profiles as $career)
+                <div class="section-title text-start">
+                    <h4 class="sub-title pe-3 mb-0">Empowering Your Business</h4>
+                    <h1 class="display-4 mb-4">{{ $career->title }}</h1>
+                    <p class="mb-4">{{ $career->description }}</p>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-4">
+                                    <!-- Split the profession string by comma -->
+                                    @php
+                                        $professions = explode(',', $career->profession);
+                                    @endphp
+                                    @foreach($professions as $profession)
+                                        <h5 class="mb-3">
+                                            <i class="fa fa-check text-primary me-2"></i>
+                                            {{ trim($profession) }} <!-- Trim to remove any extra spaces -->
+                                        </h5>
+                                    @endforeach
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="video h-100">
-                                    <img src="img/contact.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                    <div class="overlay">
-                                        <!-- <h5 class="text-white">Contact Us Today!</h5>
-                                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p> -->
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="video h-100">
+                                @if($career->image)
+                                    <img src="{{ asset($career->image) }}" alt="Career Image" class="img-fluid">
+                                @endif
+                                <div class="overlay"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
+            </div>
 
                 <!-- Right Column: Internship Form -->
                 <div class="col-lg-6">

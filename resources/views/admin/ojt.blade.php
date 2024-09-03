@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
+    
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Avatars - Kaiadmin Bootstrap 5 Admin Dashboard</title>
+	<title>Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
 
@@ -18,7 +19,7 @@
 			}
 		});
 	</script>
-
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
@@ -117,6 +118,76 @@
                                                 </div>
                                             </div>
                                         </li>
+                                         <li>
+    <div class="user-box">
+        <div class="avatar-lg">
+          
+            <video src="VideoTutorial/VideoTutorial.mp4" alt="video profile" class="avatar-img rounded" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="u-text">
+            <h4>Video Tutorial</h4>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/UsersManual.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Users Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/Admin.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Admin Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
                                         <li>
                                             <div class="dropdown-divider"></div>
                                             <!-- <a class="dropdown-item" href="#">My Profile</a>
@@ -139,7 +210,7 @@
 			<div class="container">
 				<div class="page-inner">
 					<div class="page-header">
-						<h3 class="fw-bold mb-3">Job Applications</h3>
+						<h3 class="fw-bold mb-3"></h3>
 						<ul class="breadcrumbs mb-3">
 							<!-- Breadcrumbs can be added here if needed -->
 						</ul>
@@ -150,7 +221,7 @@
 							<div class="card">
 								<div class="card-header">
 
-									<h4 class="card-title">Job Application Details</h4>
+									<h4 class="card-title">Ojt Application Details</h4>
 									<div class="dt-buttons btn-group d-flex justify-content-end gap-2 ">
 										<div class="dropdown">
 											<button type="button" class="btn btn-primary dropdown-toggle"
@@ -311,7 +382,12 @@ $(document).ready(function () {
 
 <!-- Datatables -->
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
 <!-- Bootstrap Notify -->
 <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 

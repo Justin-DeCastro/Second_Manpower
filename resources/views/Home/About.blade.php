@@ -1,385 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    @include('Components.header')
-    
-    <body>
-  
-        <!-- Spinner Start -->
-        @include('Components.spinner')
-        <!-- Spinner End -->
-        <!-- Topbar Start -->
-        @include('Components.topbar')
-       
-        <!-- Topbar End -->
+<head>
+       @include('Components.header')
+    <!-- Include FontAwesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+   
+    <style>
+        /* Move inline CSS styles here */
+        .about-img {
+            position: relative;
+            text-align: center;
+        }
 
-        <!-- Navbar & Hero Start -->
-        @include('Components.navbar')
-        <!-- Navbar & Hero End -->
+        .container2 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+            animation: rotate 10s linear infinite;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .one:after {
+            background-image: url('img/round.jpg');
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main.two {
+            top: 100%;
+        }
+
+        .one {
+            transform: rotate(0deg);
+        }
+
+        .two {
+            transform: rotate(180deg);
+        }
+
+        .main,
+        .big,
+        .small {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .main:after,
+        .big:after,
+        .small:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-size: 100% 100%;
+        }
+
+        .small.two {
+            left: 62.5%;
+        }
+
+        .small:after {
+            top: -150%;
+            left: -50%;
+        }
+
+        .static-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            color: white;
+        }
+
+        .static-text p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .text2 {
+            color: #208eae;
+            font-size: 30px;
+        }
+
+        .text1 {
+            color: #c71156;
+            font-size: 30px;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .card {
+    width: 240px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--br);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.card img {
+    width: 200px; /* Fixed width for images */
+    height: 400px; /* Fixed height for images */
+    border-radius: 50%; /* Circular images */
+    border: 4px solid var(--bc, #000);
+    object-fit: cover; /* Ensures image doesn't stretch */
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 18px; /* Ensure consistent font size */
+    margin: 10px 0;
+}
+
+.card .role, .card p {
+    font-size: 14px; /* Smaller font size for role and email */
+    margin: 5px 0;
+}
 
 
-        <div class="container-fluid about bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="about-img pb-5 ps-5">
-                            <img src="home/homeimage/image8.png" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
-                           
-                            <div class="about-experience">15 years experience</div>
+        @media (max-width: 767px) {
+            .row {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .card {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                flex: 0 0 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include Components -->
+
+    @include('Components.topbar')
+    @include('Components.navbar')
+
+    <!-- About Start -->
+    <div class="container-fluid about bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-img pb-5 ps-5">
+                        <div class="container2 circle">
+                            <div class="main one"></div>
+                            <div class="main two"></div>
+                            <div class="big circle one"></div>
+                            <div class="big circle two"></div>
+                            <div class="small circle one"></div>
+                            <div class="small circle two"></div>
                         </div>
+                        <div class="static-text" style="padding-left:40px">
+                            <p><span class="text2">About<br></span> <span class="text1">Us</span></p>
+                        </div>
+                        <div class="about-experience" style="padding-top:100px">15 years experience</div>
                     </div>
-                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
-    <div class="section-title text-start mb-5">
-        <h2>Our Mission Vision and Values</h2>
-      
+                </div>
+                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="section-title text-start mb-5">
+                        <h2>Our Mission Vision and Values</h2>
+                    </div>
+                    <div class="mb-5" style="text-align: justify;">
+                        <h3>Vision</h3>
+                        <p>To build a future where every business can thrive with the support of a skilled and motivated
+                            workforce, and every professional can achieve their career aspirations through meaningful
+                            employment opportunities.</p>
+                    </div>
+                    <div class="mb-5" style="text-align: justify;">
+                        <h3>Mission</h3>
+                        <p>To empower businesses by providing exceptional staffing solutions that match the right talent
+                            with the right opportunities, ensuring growth and success for both employers and employees.
+                            We are committed to delivering excellence, fostering a culture of integrity, and creating
+                            value for our clients through innovative and customized workforce solutions.</p>
+                    </div>
+                    <div class="mb-5" style="text-align: justify;">
+                        <h3>Values</h3>
+                        <p style="line-height: 1.5; display: block; text-align:left;">
+                            <span style="font-size: 20px; margin-right: 10px;"><strong>A</strong></span>ccountability –
+                            We are committed to taking professional accountability to our clients.<br>
+                            <span style="font-size: 20px; margin-right: 10px;"><strong>B</strong></span>eyond –
+                            Dedicated to going the extra mile to cater to client’s manpower specifications while
+                            ensuring to deploy competent talents.<br>
+                            <span style="font-size: 20px; margin-right: 10px;"><strong>I</strong></span>ntegrity –
+                            Driven to uphold honesty, fairness, and decency.<br>
+                            <span style="font-size: 20px; margin-right: 10px;"><strong>C</strong></span>ustomized
+                            Client-Oriented – Always determined to provide exceptional service tailored to meet client’s
+                            needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid feature py-5">
+        <div class="container py-5">
+            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h4 class="sub-title px-3 mb-0">Why Choose Us?</h4>
+                </div>
+                <h1 class="display-3 mb-4"> ABIC MANPOWER SERVICE CORP</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/logo_cleanup.jpg" class="img-fluid" alt="Company Logo" width="1200" height="auto">
+                    </div>
+                    <div class="col-md-6">
+                        <p style="text-align: justify;">
+                            A licensee of Department of Labor and Employment <a href="https://www.dole.gov.ph"
+                                target="_blank">DOLE</a>, we specialize in placing manpower to support the operations of
+                            various companies. We cater to the requirements of different industries including:
+                            Manufacturing, Construction, Retail, BPOs, Logistics, and many others.<br><br>
+                            With our team of seasoned experts, we’re able to recruit the right talent quickly and
+                            efficiently, allowing our clients to focus on their core business activities. Our commitment
+                            to understanding your specific needs ensures we deliver the best fit for your organization’s
+                            requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+<!-- Our Team Start -->
+<!--<div class="container">-->
+<!--    <h1>Our Team</h1>-->
+<!--    <div class="row">-->
+<!--        @foreach($executives as $executive)-->
+<!--            <div class="col-md-3 col-sm-6 mb-4">-->
+<!--                <div class="card" style="--bc: #8E9792; --btn: #8E9792;">-->
+<!--                    <img src="{{ asset($executive->companyimage) }}" alt="Profile picture of {{ $executive->companyname }}">-->
+<!--                    <h2>{{ $executive->companyname }}</h2>-->
+<!--                    <p class="role">{{ $executive->position }}</p>-->
+<!--                    <p>{{ $executive->email }}</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        @endforeach-->
+<!--    </div>-->
+<!--</div>-->
+<!-- Our Team End -->
+<div class="container" style="width: 80%; margin: auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h1 class="section-title" style="text-align: center; color: #333;">Meet Our Team</h1>
+
+    <!-- Leadership Team -->
+    <div class="leadership-team" style="display: flex; flex-direction: column; align-items: center; gap: 40px; margin: 20px 0;">
+        <!-- CEO -->
+        <div class="ceo-section" style="text-align: center;">
+            @foreach ($executives as $executive)
+                @if ($executive->position === 'CEO')
+                    <div class="team-member" style="text-align: center;">
+                        <a href="{{ asset($executive->companyimage) }}" data-lightbox="team" data-title="{{ $executive->companyname }}">
+                            <img src="{{ asset($executive->companyimage) }}" alt="{{ $executive->companyname }}" style="border-radius: 60%; width: 200px; height: 200px; object-fit: cover; border: 4px solid #ddd;">
+                        </a>
+                        <h3 style="margin: 10px 0 5px; color: #333;">{{ $executive->companyname }}</h3>
+                        <p style="margin: 0; color: #666;">{{ $executive->position }}</p>
+                        <p style="margin: 0; color: #999;">{{ $executive->bio }}</p>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+
+        <!-- President -->
+        <div class="president-section" style="text-align: center;">
+            @foreach ($executives as $executive)
+                @if ($executive->position === 'President')
+                    <div class="team-member" style="text-align: center;">
+                        <a href="{{ asset($executive->companyimage) }}" data-lightbox="team" data-title="{{ $executive->companyname }}">
+                            <img src="{{ asset($executive->companyimage) }}" alt="{{ $executive->companyname }}" style="border-radius: 60%; width: 200px; height: 200px; object-fit: cover; border: 4px solid #ddd;">
+                        </a>
+                        <h3 style="margin: 10px 0 5px; color: #333;">{{ $executive->companyname }}</h3>
+                        <p style="margin: 0; color: #666;">{{ $executive->position }}</p>
+                        <p style="margin: 0; color: #999;">{{ $executive->bio }}</p>
+                    </div>
+                @endif
+            @endforeach
+        </div>
     </div>
 
-    <div class="mb-5">
-        <h3>Vision</h3>
-        <p>To build a future where every business can thrive with the support of a skilled and motivated workforce, and every professional can achieve their career aspirations through meaningful employment opportunities.</p>
-    </div>
-
-    <div class="mb-5">
-        <h3>Mission</h3>
-        <p>To empower businesses by providing exceptional staffing solutions that match the right talent with the right opportunities, ensuring growth and success for both employers and employees. We are committed to delivering excellence, fostering a culture of integrity, and creating value for our clients through innovative and customized workforce solutions.</p>
-    </div>
-
-    <div class="mb-5">
-        <h3>Values</h3>
-        <p style="line-height: 1.5; display: block; text-align:left;">
-            <span style="font-size: 20px; margin-right: 10px;"><strong>A</strong></span>ccountability – We are committed to taking professional accountability to our clients.<br>
-            <span style="font-size: 20px; margin-right: 10px;"><strong>B</strong></span>eyond – Dedicated to going the extra mile to cater to client’s manpower specifications while ensuring to deploy competent talents.<br>
-            <span style="font-size: 20px; margin-right: 10px;"><strong>I</strong></span>ntegrity – Driven to uphold honesty, fairness, and decency.<br>
-            <span style="font-size: 20px; margin-right: 10px;"><strong>C</strong></span>ustomized Client-Oriented – Always determined to provide exceptional service tailored to meet client’s needs.
-        </p>
+    <!-- Additional Team Members -->
+    <div class="additional-members" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        @foreach ($executives as $executive)
+            @if ($executive->position !== 'CEO' && $executive->position !== 'President')
+                <div class="team-member" style="text-align: center; width: 250px;">
+                    <a href="{{ asset($executive->companyimage) }}" data-lightbox="team" data-title="{{ $executive->companyname }}">
+                        <img src="{{ asset($executive->companyimage) }}" alt="{{ $executive->companyname }}" style="border-radius: 70%; width: 180px; height: 200px; object-fit: cover; border: 3px solid #ddd;">
+                    </a>
+                    <h3 style="margin: 5px 0 3px; color: #333;">{{ $executive->companyname }}</h3>
+                    <p style="margin: 0; color: #666;">{{ $executive->position }}</p>
+                    <p style="margin: 0; color: #999;">{{ $executive->bio }}</p>
+                </div>
+            @endif
+        @endforeach
     </div>
 </div>
 
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-        <!-- Feature Start -->
-        <div class="container-fluid feature py-5">
-    <div class="container py-5">
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h4 class="sub-title px-3 mb-0">Why Choose Us?</h4>
-            </div>
-            <h1 class="display-3 mb-4"> ABIC MANPOWER SERVICE CORP</h1>
-            <div class="row">
-                <div class="col-md-6"> <!-- Increased column width to half of the row -->
-                    <img src="images/logo_cleanup.jpg" class="img-fluid" alt="" width="1200" height="auto">
-                </div>
-                <div class="col-md-6">
-                <p style="text-align: justify;">
-    A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exceptional talents with boundless career opportunities across the Philippines. With our determination to implement compulsory labor standards in the Philippines, our team ensures that the proper, updated, and accurate information from Department of Labor and Employment (DOLE) is discussed, explained, and communicated well to our clients. Ensuring that our exceptional talents will receive correct labor due and campaigning competitive package in the market. We are driven by our core ethics of accountability, beyond boundaries, integrity, and customized client-oriented. Through these principles, our inimitable execution of recruitment and selection has been producing clients satisfactory and advancement of viability given the career choices.
-</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <!-- Feature items here -->
-        </div>
-    </div>
-</div>
 
 
+    <!-- Include Footer -->
+    @include('Components.footer')
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
 
-        <!-- About End -->
+        // Function to display success message
+        function showSuccessMessage() {
+            alert("Form submitted successfully!");
+        }
 
-        <!-- Feature Start -->
-        <div class="container-fluid feature py-5">
-    <div class="container py-5">
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h4 class="sub-title px-3 mb-0">Our Services</h4>
-            </div>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
-                    <div class="col-12" style="flex: 1;">
-                        <div class="feature-icon mb-4">
-                            <div class="p-3 d-inline-flex bg-white rounded">
-                                <i class="fas fa-users fa-4x text-primary"></i>
-                            </div>
-                        </div>
-                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                            <h5 class="mb-4">Recruitment Services</h5>
-                            <p class="mb-0">Conducting candidate sourcing, screening, and selection processes to match qualified individuals with job openings.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
-                    <div class="col-12" style="flex: 1;">
-                        <div class="feature-icon mb-4">
-                            <div class="p-3 d-inline-flex bg-white rounded">
-                                <i class="fas fa-building fa-4x text-primary"></i>
-                            </div>
-                        </div>
-                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                            <h5 class="mb-4">Outsourcing</h5>
-                            <p class="mb-0">Managing specific business functions or processes on behalf of clients, such as payroll administration or HR management.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
-                    <div class="col-12" style="flex: 1;">
-                        <div class="feature-icon mb-4">
-                            <div class="p-3 d-inline-flex bg-white rounded">
-                                <i class="fas fa-briefcase fa-4x text-primary"></i>
-                            </div>
-                        </div>
-                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                            <h5 class="mb-4">Staffing Solutions</h5>
-                            <p class="mb-0">Providing temporary, permanent, or contract staff to meet short-term or long-term workforce needs of businesses.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="row-cols-1 feature-item p-4" style="height: 400px; display: flex; flex-direction: column;">
-                    <div class="col-12" style="flex: 1;">
-                        <div class="feature-icon mb-4">
-                            <div class="p-3 d-inline-flex bg-white rounded">
-                                <i class="fas fa-handshake fa-4x text-primary"></i>
-                            </div>
-                        </div>
-                        <div class="feature-content d-flex flex-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                            <h5 class="mb-4">Direct Hiring</h5>
-                            <p class="mb-0">Helping companies find and hire employees directly for their workforce needs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                    
-                    <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <!-- Feature End -->
-
-
-        <!-- Book Appointment Start -->
-        <div class="container-fluid appointment py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-    <div class="section-title text-start">
-        <h4 class="sub-title pe-3 mb-0">Empowering Your Business</h4>
-        <h1 class="display-4 mb-4">Reliable Manpower Solutions</h1>
-        <p class="mb-4">At Our Manpower Solutions, we specialize in providing reliable and skilled professionals tailored to meet your business needs. Whether you require temporary staffing or permanent placements, we ensure seamless integration into your workforce.</p>
-        <div class="row g-4">
-            <div class="col-sm-6">
-                <div class="d-flex flex-column h-100">
-                    <div class="mb-4">
-                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Skilled Professionals</h5>
-                        <p class="mb-0">Our candidates are rigorously screened and trained to deliver high performance in diverse industries.</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Flexible Solutions</h5>
-                        <p class="mb-0">We offer flexible staffing solutions that adapt to your business fluctuations and operational needs.</p>
-                    </div>
-                    <!-- <div class="text-start mb-4">
-                        <a href="tel:+1234567890" class="btn btn-primary rounded-pill text-white py-3 px-5">Contact Us</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="video h-100">
-                    <img src="img/contact.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                    <div class="overlay">
-                        <!-- <h5 class="text-white">Contact Us Today!</h5>
-                        <p class="text-white">Call us at <a href="tel:+1234567890" class="text-white fw-bold">+1 (234) 567-890</a></p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="appointment-form rounded p-5">
-                            <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
-                            
-                           <form id="contactForm" action="{{ route('contact.store') }}" method="POST">
-    @csrf
-    <h1 class="title text-center mb-4">Talk to Us</h1>
-
-    <!-- Name -->
-    <div class="form-group">
-        <label for="formName" class="d-block">
-            <i class="icon" data-feather="user"></i>
-        </label>
-        <input type="text" name="name" id="formName" class="form-control form-control-lg thick" placeholder="Full Name" required>
-    </div>
-
-    <!-- E-mail -->
-    <div class="form-group">
-        <label for="formEmail" class="d-block">
-            <i class="icon" data-feather="mail"></i>
-        </label>
-        <input type="email" name="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required>
-    </div>
-
-    <!-- Contact Number -->
-    <div class="form-group">
-        <label for="formContact" class="d-block">
-            <i class="icon" data-feather="phone"></i>
-        </label>
-        <input type="tel" name="contact_number" id="formContact" class="form-control form-control-lg thick" placeholder="Contact Number" required>
-    </div>
-
-    <!-- Country -->
-    <div class="form-group">
-        <label for="formCountry" class="d-block">
-            <i class="icon" data-feather="globe"></i>
-        </label>
-        <input type="text" name="country" id="formCountry" class="form-control form-control-lg thick" placeholder="Country" required>
-    </div>
-
-    <!-- Subject -->
-    <div class="form-group">
-        <label for="formSubject" class="d-block">
-            <i class="icon" data-feather="tag"></i>
-        </label>
-        <select name="subject" id="formSubject" class="form-control form-control-lg thick" required>
-            <option value="" disabled selected>Select Subject</option>
-            <option value="Applicant-Inquiries">Applicant Inquiries</option>
-            <option value="Applicant-Follow Up">Applicant Follow Up</option>
-            <option value="Employer-Inquiries">Employer Inquiries</option>
-            <option value="Employer-Manpower Request">Employer Manpower Request</option>
-            <option value="Other">Other</option>
-        </select>
-    </div>
-
-    <!-- Message -->
-    <div class="form-group">
-        <textarea name="message" id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message" required></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
-    </div>
-</form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Video -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
-                        <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Book Appointment End -->
-
-
-        <!-- Team Start -->
-        <div class="container-fluid team py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Meet our team</h4>
-                    </div>
-                    
-                </div>
-                <div class="row g-4 justify-content-center">
-                @foreach($executives as $award)
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item rounded">
-                            <div class="team-img rounded-top h-100">
-                            <img src="{{ asset('images/' . $award->companyimage) }}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>{{ $award->companyname }}</h5>
-                                <p class="mb-0">{{ $award->position }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                   
-                </div>
-            </div>
-        </div>
-      
-        <script>
-document.addEventListener('DOMContentLoaded', function() {
-    @if(session('success'))
-        Swal.fire({
-            title: 'Success!',
-            text: '{{ session('success') }}',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        });
-    @endif
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    @if(session('failed'))
-        Swal.fire({
-            title: 'Failed!',
-            text: '{{ session('failed') }}',
-            icon: 'Failed',
-            confirmButtonText: 'OK'
-        });
-    @endif
-});
-</script>
-   @include('Components.footer')
-    
-
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-        
-    </body>
+        // Function to display error message
+        function showErrorMessage() {
+            alert("There was an error submitting the form.");
+        }
+    </script>
+</body>
 
 </html>

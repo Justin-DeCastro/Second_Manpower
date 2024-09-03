@@ -58,40 +58,43 @@
             }
         }
     </style>
-
-    <div class="container-fluid appointment py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                    <div class="section-title text-start">
-                        <h4 class="sub-title pe-3 mb-0">We Are Hiring</h4>
-                        <h1 class="display-4 mb-4"></h1>
-                        <p class="mb-4"></p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Human Resources</h5>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Accounting</h5>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Office Support</h5>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Liaison Assistant</h5>
-                                    </div>
-                                </div>
+<div class="container-fluid appointment py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+                <div class="section-title text-start">
+                    <h4 class="sub-title pe-3 mb-0">We Are Hiring</h4>
+                    <h1 class="display-4 mb-4"></h1>
+                    <p class="mb-4"></p>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column h-100">
+                                @foreach($careers as $career)
+                                    @php
+                                        // Split the career titles by comma
+                                        $titles = explode(',', $career->title);
+                                    @endphp
+                                    
+                                    @foreach($titles as $title)
+                                        <div class="mb-4">
+                                            <h5 class="mb-3">
+                                                <i class="fa fa-check text-primary me-2"></i>{{ trim($title) }}
+                                            </h5>
+                                        </div>
+                                    @endforeach
+                                @endforeach
                             </div>
-                            <div class="col-sm-6">
-                                <div class="video h-100">
-                                    <img src="home/homeimage/4.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            @foreach($careers as $career)
+                                @if($career->image)
+                                    <img src="{{ asset($career->image) }}" alt="Career Image" class="img-fluid">
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
+          </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                     <div class="appointment-form rounded p-5">
                         <table class="job-table">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ojt;
+use App\Models\OjtUpdate;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InterviewApproval;
 use App\Models\User;
@@ -13,10 +14,11 @@ class OjtController extends Controller
 
     public function index()
     {
+         $ojtupdate = OjtUpdate::all();
         $user=User::find(Auth::user()->id);
         $ojt = Ojt::all();
         // Typically used to show the form view
-        return view('admin.ojt',compact('ojt','user'));
+        return view('admin.ojt',compact('ojt','user','ojtupdate'));
     }
 
     public function store(Request $request)
@@ -61,7 +63,12 @@ class OjtController extends Controller
     }
 
 
-public function showForm(){
-    return view('Home.ojtform');
+// Assuming your model is named OjtUpdate
+public function showForm()
+{
+    // Fetch data from the database
+    $ojtupdate = OjtUpdate::all();
+        return view('home.ojtform', ['ojtupdate' => $ojtupdate]);
 }
+
 }

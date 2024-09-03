@@ -37,4 +37,52 @@ class CompanyController extends Controller
 
         return redirect()->back()->with('success', 'Company details uploaded successfully!');
     }
+    public function edit($id)
+    {
+        $company = Company::findOrFail($id);
+        return response()->json($company); // Return company details for AJAX
+    }
+
+    // Update the specified resource in storage.
+    public function update(Request $request, $id)
+    {
+        $company = Company::findOrFail($id);
+        
+        $request->validate([
+            'companyname' => 'required|string|max:255',
+            'companyimage' => 'nullable|image|max:2048',
+        ]);
+
+        $company->companyname = $request->input('companyname');
+
+        if ($request->hasFile('companyimage')) {
+            // Delete old image if it exists
+            if ($company->companyimage) {
+                Storage::delete($company->companyimage);
+            }
+
+            // Store the new image
+            $imagePath = $request->file('companyimage')->store('public/companies');
+            $company->companyimage = basename($imagePath);
+        }
+
+        $company->save();
+
+        return response()->json(['message' => 'Company details updated successfully']);
+    }
+
+    // Remove the specified resource from storage.
+    public function destroy($id)
+    {
+        $company = Company::findOrFail($id);
+        
+        // Delete the image file if it exists
+        if ($company->companyimage) {
+            Storage::delete('public/companies/' . $company->companyimage);
+        }
+        
+        $company->delete();
+
+        return redirect()->back()->with('Message', 'Deleted Successfully');
+    }
 }

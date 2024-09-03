@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile</title>
+    <title>Labor Standard</title>
     <!-- External CSS -->
    
-</head>
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
 <body>
 
     <!-- Header -->
@@ -123,15 +123,15 @@ margin-top:200px;
   <tbody>
     <tr>
       <b>
-      <td class="tg-phtq" rowspan="2"><b>Application Labor Standards</td></b>
-      <td class="tg-phtq" colspan="2"><b>Retail &amp; Services</td></b>
-      <td class="tg-phtq" rowspan="2"><b>Non Agricultural/Agricultural</td></b>
-      <td class="tg-hmp3" rowspan="2"><b>Ref. (Page No.)</td></b>
+      <td class="tg-phtq" rowspan="2"><b><center>Application Labor Standards</td></b>
+      <td class="tg-phtq" colspan="2"><b><center>Retail &amp; Services</td></b>
+      <td class="tg-phtq" rowspan="2"><b><center>Non Agricultural/Agricultural</td></b>
+      <td class="tg-hmp3" rowspan="2"><b><center>Ref. (Page No.)</td></b>
     </tr>
     
     <tr>
-      <td class="tg-dvpl">Employing 1 to 5 Workers</td>
-      <td class="tg-dvpl">Employing 1 to 9 Workers</td>
+      <td class="tg-dvpl"><center><b>Employing 1 to 5 Workers</td>
+      <td class="tg-dvpl"><b>Employing 1 to 9 Workers</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>1. Minimum Wage</td>
@@ -144,7 +144,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">2</td>
+      <td class="tg-hmp3"><center>2</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>2. Holiday Pay</td>
@@ -157,7 +157,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">14</td>
+      <td class="tg-hmp3"><center>14</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>3. Premium Pay</td>
@@ -170,7 +170,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">18</td>
+      <td class="tg-hmp3"><center>18</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>4. Overtime Pay</td>
@@ -183,7 +183,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">21</td>
+      <td class="tg-hmp3"><center>21</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>5. Night Shift Differential</td>
@@ -196,7 +196,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">23</td>
+      <td class="tg-hmp3"><center>23</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>6. Service Charges</td>
@@ -209,7 +209,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">26</td>
+      <td class="tg-hmp3"><center>26</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>7. Service Incentive Leave</td>
@@ -222,7 +222,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">27</td>
+      <td class="tg-hmp3"><center>27</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>8. Maternity Leave</td>
@@ -235,7 +235,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">29</td>
+      <td class="tg-hmp3"><center>29</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>9. Paternity Leave</td>
@@ -248,7 +248,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">31</td>
+      <td class="tg-hmp3"><center>31</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>10. Parental Leave</td>
@@ -261,7 +261,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">33</td>
+      <td class="tg-hmp3"><center>33</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>11. Leave for VAWC</td>
@@ -274,7 +274,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">36</td>
+      <td class="tg-hmp3"><center>36</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>12. Special Leave for Women</td>
@@ -287,7 +287,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">38</td>
+      <td class="tg-hmp3"><center>38</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>13. 13th Month Pay</td>
@@ -300,7 +300,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">40</td>
+      <td class="tg-hmp3"><center>40</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>14. Separation Pay</td>
@@ -313,7 +313,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">45</td>
+      <td class="tg-hmp3"><center>45</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>15. Retirement Pay</td>
@@ -326,7 +326,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">48</td>
+      <td class="tg-hmp3"><center>48</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>16. ECC Benefits</td>
@@ -339,7 +339,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">52</td>
+      <td class="tg-hmp3"><center>52</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>17. PhilHealth Benefits</td>
@@ -352,7 +352,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">57</td>
+      <td class="tg-hmp3"><center>57</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>18. SSS Benefits </td>
@@ -365,7 +365,7 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">59</td>
+      <td class="tg-hmp3"><center>59</td>
     </tr>
     <tr>
       <td class="tg-phtq"><b>19. Pag-IBIG Benefits</td>
@@ -378,10 +378,10 @@ margin-top:200px;
       <td class="tg-ydyv">
         <center>✔</center>
       </td>
-      <td class="tg-hmp3">61</td>
+      <td class="tg-hmp3"><center>61</td>
     </tr>
 </table>
-<h4 style="margin-left: 266px;"><i>Courtesy of DOLE</i></h4>
+<h4 style="margin-left: 350px;"><i>Courtesy of DOLE</i></h4>
 
 
 

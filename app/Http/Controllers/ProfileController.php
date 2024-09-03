@@ -57,7 +57,7 @@ class ProfileController extends Controller
     $contactForm->save();
 
     session()->flash('message', 'Your application was successfully submitted!');
-    Mail::to('decastrojustin321@gmail.com')->send(new ProfileMail());
+    Mail::to('abicmanpower@gmail.com')->send(new ProfileMail());
     // Redirect or respond as needed after successful submission
     return redirect()->back()->with('success', 'Form submitted successfully!');
 }

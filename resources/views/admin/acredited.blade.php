@@ -28,7 +28,7 @@
             },
         });
     </script>
-
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
     <!-- CSS Files -->
     <link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Admin/assets/css/plugins.min.css" />
@@ -96,8 +96,8 @@
                                     </form>
                                 </ul>
                             </li>
-
-
+                            
+                           
 
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
@@ -122,10 +122,84 @@
                                                 <div class="u-text">
                                                     <h4>{{ $user->name }}</h4>
                                                     <p class="text-muted">{{ $user->email }}</p>
-
+                                                  
                                                 </div>
                                             </div>
                                         </li>
+                                      <li>
+    <div class="user-box">
+        <div class="avatar-lg">
+          
+            <video src="VideoTutorial/VideoTutorial.mp4" alt="video profile" class="avatar-img rounded" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="u-text">
+            <h4>Video Tutorial</h4>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/UsersManual.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Users Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/Admin.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Admin Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+
+
+
                                         <li>
                                             <div class="dropdown-divider"></div>
                                             <!-- <a class="dropdown-item" href="#">My Profile</a>
@@ -147,76 +221,75 @@
 
 
 			<div class="container">
-                <div class="page-inner">
-                    <div class="page-header d-flex justify-content-between align-items-center">
-                        <ul class="breadcrumbs mb-3">
-                            <!-- Breadcrumb items can be added here if needed -->
-                        </ul>
-                        <div>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                Upload Company Details
-                            </button>
+    <div class="page-inner">
+        <div class="page-header d-flex justify-content-between align-items-center">
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                    Upload Company Details
+                </button>
+            </div>
+            <ul class="breadcrumbs mb-3">
+                <!-- Breadcrumb items can be added here if needed -->
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Accredited Company</h4>
+                        <div class="dt-buttons btn-group d-flex justify-content-end gap-2">
+                            <!-- Uncomment and adjust if needed -->
+                            <!-- <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class='bx bx-export'></i> Export
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button type="button" id="copyBtn" class="btn dropdown-item"><i
+                                                class='bx bx-copy'></i> Copy</button></li>
+                                    <li><button type="button" id="printBtn" class="btn dropdown-item"><i
+                                                class='bx bx-printer'></i> Print</button></li>
+                                    <li><button type="button" id="excelBtn" class="btn dropdown-item"><i
+                                                class='bx bx-file'></i> Excel</button></li>
+                                    <li><button type="button" id="pdfBtn" class="btn dropdown-item"><i
+                                                class='bx bxs-file-pdf'></i> Pdf</button></li>
+                                </ul>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Job Application Details</h4>
-									<div class="dt-buttons btn-group d-flex justify-content-end gap-2 ">
-										<div class="dropdown">
-											<button type="button" class="btn btn-primary dropdown-toggle"
-												data-bs-toggle="dropdown" aria-expanded="false">
-												<i class='bx bx-export'></i> Export
-											</button>
-											<ul class="dropdown-menu">
-												<li><button type="button" id="copyBtn" class="btn dropdown-item"><i
-															class='bx bx-copy'></i> Copy</button></li>
-												<li><button type="button" id="printBtn" class="btn dropdown-item"><i
-															class='bx bx-printer'></i> Print</button></li>
-												<li><button type="button" id="excelBtn" class="btn dropdown-item"><i
-															class='bx bx-file'></i>Excel</button></li>
-												<li><button type="button" id="pdfBtn" class="btn dropdown-item"><i
-															class='bx bxs-file-pdf'></i> Pdf</button></li>
-											</ul>
-										</div>
-										<div class="dropdown">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" id="myDataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Company Image</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($companies as $company)
+                                    <tr>
+                                        <td>{{ $company->name }}</td>
+                                        <td><img src="{{ asset($company->image) }}" alt="Company Image" style="max-width: 100px;"></td>
+                                        <td>
+                                            <!-- Update Button -->
+                                          
 
-
-										</div>
-
-
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table" id="myDataTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>Company Name</th>
-                                                    <th>Company Image</th>
-                                                    <!-- Add more table headings as needed -->
-                                                </tr>
-                                            </thead>
-                                            <!-- Uncomment and adjust the tbody section when ready to display data -->
-                                            <tbody>
-                                                @foreach($companies as $company)
-                                                <tr>
-                                                    <td>{{ $company->name }}</td>
-                                                    <td><img src="{{ asset($company->image) }}" alt="Company Image" style="max-width: 100px;"></td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-
-
-
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                                            <!-- Delete Button -->
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteCompanyModal{{ $company->id }}">Delete</button>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- Add this code inside the <body> tag, preferably after the main panel div -->
@@ -248,84 +321,222 @@
     </div>
 
     <!-- Add this button where you want to trigger the modal -->
+@foreach($companies as $company)
+<div class="modal fade" id="editCompanyModal{{ $company->id }}" tabindex="-1" aria-labelledby="editCompanyModalLabel{{ $company->id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="editCompanyForm{{ $company->id }}" method="POST" action="{{ route('companies.update', $company->id) }}" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCompanyModalLabel{{ $company->id }}">Edit Company Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="editCompanyName{{ $company->id }}" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="editCompanyName{{ $company->id }}" name="companyname" value="{{ $company->companyname }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editCompanyImage{{ $company->id }}" class="form-label">Company Image</label>
+                        <input type="file" class="form-control" id="editCompanyImage{{ $company->id }}" name="companyimage">
+                        <img src="{{ asset('storage/' . $company->companyimage) }}" alt="Company Image" class="img-fluid mt-2" style="max-height: 150px;">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
+
+<!--delete-->
+@foreach($companies as $company)
+<div class="modal fade" id="deleteCompanyModal{{ $company->id }}" tabindex="-1" aria-labelledby="deleteCompanyModalLabel{{ $company->id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="{{ route('companies.destroy', $company->id) }}">
+                @csrf
+                @method('DELETE')
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteCompanyModalLabel{{ $company->id }}">Delete Company</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this company?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
 
 
 
-	<script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
-	<script src="Admin/assets/js/core/popper.min.js"></script>
-	<script src="Admin/assets/js/core/bootstrap.min.js"></script>
+    <script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="Admin/assets/js/core/popper.min.js"></script>
+    <script src="Admin/assets/js/core/bootstrap.min.js"></script>
 
-	<!-- jQuery Scrollbar -->
+<script>
+    $(document).ready(function() {
+    // Edit company
+    $('form[id^="editCompanyForm"]').on('submit', function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+        var formData = new FormData(form[0]);
+        var companyId = form.attr('id').replace('editCompanyForm', '');
+
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: response.message,
+                    timer: 2000,
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                }).then(() => {
+                    $('#editCompanyModal' + companyId).modal('hide');
+                    location.reload(); // Reload page or update table row
+                });
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to update company details. Please try again.',
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: true
+                });
+            }
+        });
+    });
+
+    // Delete company
+    $('form[id^="deleteCompanyForm"]').on('submit', function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: form.serialize(),
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: response.message,
+                    timer: 2000,
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                }).then(() => {
+                    location.reload(); // Reload page or update table
+                });
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to delete company. Please try again.',
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: true
+                });
+            }
+        });
+    });
+});
+
+</script>
+    <script>
+        $(document).ready(function () {
+
+            var dataTable = $('#myDataTable').DataTable({
+
+                responsive: true, // Enable Responsive extension
+                inlineEditing: true,
+
+                buttons: [
+                    'print', 'copy', 'csv', 'pdf'
+                ],
+
+                "language": {
+                    "search": "Search: ",
+                    "searchPlaceholder": "Search here..."
+                }
+            });
+            // responsive: true
+            // autoFill: true
+
+            // Button click events
+            $('#printBtn').on('click', function () {
+                dataTable.button('.buttons-print').trigger();
+            });
+            $('#copyBtn').on('click', function () {
+                dataTable.button('.buttons-copy').trigger();
+            });
+
+            $('#excelBtn').on('click', function () {
+                dataTable.button('.buttons-csv').trigger();
+            });
+
+            $('#pdfBtn').on('click', function () {
+                dataTable.button('.buttons-pdf').trigger();
+            });
 
 
-					<script>
-						$(document).ready(function () {
+        });
+    </script>
+    <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
-							var dataTable = $('#myDataTable').DataTable({
+    <!-- Chart JS -->
+    <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
 
-								responsive: true, // Enable Responsive extension
-								inlineEditing: true,
+    <!-- jQuery Sparkline -->
+    <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-								buttons: [
-									'print', 'copy', 'csv', 'pdf'
-								],
+    <!-- Chart Circle -->
+    <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
 
-								"language": {
-									"search": "Search: ",
-									"searchPlaceholder": "Search here..."
-								}
-							});
-							// responsive: true
-							// autoFill: true
-
-							// Button click events
-							$('#printBtn').on('click', function () {
-								dataTable.button('.buttons-print').trigger();
-							});
-							$('#copyBtn').on('click', function () {
-								dataTable.button('.buttons-copy').trigger();
-							});
-
-							$('#excelBtn').on('click', function () {
-								dataTable.button('.buttons-csv').trigger();
-							});
-
-							$('#pdfBtn').on('click', function () {
-								dataTable.button('.buttons-pdf').trigger();
-							});
+    <!-- Datatables -->
 
 
-						});
-					</script>
-                     <script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Bootstrap Notify -->
+    <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-                     <!-- Chart JS -->
-                     <script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
+    <!-- jQuery Vector Maps -->
+    <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
 
-                     <!-- jQuery Sparkline -->
-                     <script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-                     <!-- Chart Circle -->
-                     <script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
+    <!-- Kaiadmin JS -->
+    <script src="Admin/assets/js/kaiadmin.min.js"></script>
 
-                     <!-- Datatables -->
-
-
-                     <!-- Bootstrap Notify -->
-                     <script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-                     <!-- jQuery Vector Maps -->
-                     <script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-                     <script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
-
-                     <!-- Sweet Alert -->
-                     <script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
-                     <!-- Kaiadmin JS -->
-                     <script src="Admin/assets/js/kaiadmin.min.js"></script>
-
-                     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-                     <script src="Admin/assets/js/setting-demo.js"></script>
-                     <script src="Admin/assets/js/demo.js"></script>
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="Admin/assets/js/setting-demo.js"></script>
+    <script src="Admin/assets/js/demo.js"></script>
 </body>
 </html>

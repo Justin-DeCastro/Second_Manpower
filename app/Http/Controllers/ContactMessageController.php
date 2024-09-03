@@ -23,7 +23,7 @@ class ContactMessageController extends Controller
 
         $contactMessage = ContactMessage::create($request->all());
 
-        Mail::to('decastrojustin321@gmail.com')->send(new ContactMessageMail($contactMessage));
+        Mail::to('abicmanpower@gmail.com')->send(new ContactMessageMail($contactMessage));
 
         return redirect()->back()->with('success', 'Message sent successfully!');
     }

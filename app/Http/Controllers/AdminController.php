@@ -38,9 +38,25 @@ $user=User::find(Auth::user()->id);
    $Jobs = Jobfair::all();
    return view('admin.jobfair',compact('Jobs','user'));
 }
- public function calendar(){
-   $user=User::find(Auth::user()->id);
-    $interviews = Application::all();
-    return view('admin.calendar',compact('interviews','user'));
- }
+public function calendar(){
+    // Get the currently authenticated user
+    $user = User::find(Auth::user()->id);
+    
+    // Retrieve the interviews with a date and specific applicant status
+    $interviews = Application::whereNotNull('date')
+                             ->where(function($query) {
+                                 $query->where('applicant_status', 'Accepted');
+                             })
+                             ->get(['id', 'name', 'date', 'status']); // Include 'status' field
+    
+    // Update the applicant_status to 'Reschedule' where status is 'Reschedule'
+    Application::where('status', 'Reschedule')
+                ->update(['applicant_status' => 'Reschedule']);
+    
+    // Pass the interviews and user data to the view
+    return view('admin.calendar', compact('interviews', 'user'));
 }
+
+
+}
+

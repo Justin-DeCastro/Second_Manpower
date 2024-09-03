@@ -30,6 +30,10 @@ class ManpowerReqController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+             'company_website' => 'required|string|max:255',
+              'company_name' => 'required|string|max:255',
+                'contact_name' => 'required|string|max:255',
+                  'contact_number' => 'required|string|max:255',
             'work_type' => 'required|string|max:255',
             'vacant_position' => 'required|string|max:255',
             'job_category' => 'required|string|max:255',

@@ -28,7 +28,7 @@
             },
         });
     </script>
-
+<link rel="shortcut icon" type="xicon" href="images/logo-removebg-preview.png">
     <!-- CSS Files -->
     <link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Admin/assets/css/plugins.min.css" />
@@ -126,6 +126,76 @@
                                                 </div>
                                             </div>
                                         </li>
+                                         <li>
+    <div class="user-box">
+        <div class="avatar-lg">
+          
+            <video src="VideoTutorial/VideoTutorial.mp4" alt="video profile" class="avatar-img rounded" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="u-text">
+            <h4>Video Tutorial</h4>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/UsersManual.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Users Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="user-box">
+        <div class="avatar-lg">
+         
+<a href="VideoTutorial/Admin.pdf" target="_blank" style="text-decoration: none;"download>
+    <button style="
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; /* Adjust the width to make the button longer */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    ">
+        View Admin Manual
+    </button>
+</a>
+
+        </div>
+        <div class="u-text">
+            <!--<h4>Admin Manual</h4>-->
+        </div>
+    </div>
+</li>
                                         <li>
                                             <div class="dropdown-divider"></div>
                                             <!-- <a class="dropdown-item" href="#">My Profile</a>

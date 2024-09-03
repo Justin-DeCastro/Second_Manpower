@@ -2,12 +2,12 @@
     <div class="sidebar-logo">
       <!-- Logo Header -->
       <div class="logo-header" data-background-color="dark">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
           <img
-            src="Admin/assets/img/kaiadmin/logo_light.svg"
+            src="images/abiclogo.jpg"
             alt="navbar brand"
             class="navbar-brand"
-            height="20"
+            height="50"
           />
         </a>
         <div class="nav-toggle">
@@ -25,54 +25,20 @@
       <!-- End Logo Header -->
     </div>
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          
+          
+          </li>
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
 
-          <li class="nav-section">
-            <span class="sidebar-mini-icon">
-              <i class="fa fa-ellipsis-h"></i>
-            </span>
-            <h4 class="text-section">Components</h4>
-          </li>
+       
 
           <li class="nav-item">
             <a href="{{ route('dashboard') }}">
                 <i class="fas fa-briefcase"></i>
                 <p>Dashboard</p>
             </a>
-            <a href="{{ route('applications') }}">
-                <i class="fas fa-briefcase"></i>
-                <p>Job Application</p>
-            </a>
-            <a href="{{ route('job-fair') }}">
-                <i class="fas fa-briefcase"></i>
-                <p>Job Fair</p>
-            </a>
-            <a href="{{ route('calendars') }}">
-                <i class="fas fa-calendar-alt"></i>
-                <p>Calendar</p>
-            </a>
-            <a href="{{ route('ojt.index') }}">
-                <i class="fas fa-user-alt"></i>
-                <p>OJT</p>
-            </a>
-            <a href="{{ route('profile.index') }}">
-                <i class="fas fa-user-alt"></i>
-                <p>Company Profile</p>
-            </a>
-            <a href="{{ route('award.index') }}">
-                <i class="fas fa-user-alt"></i>
-                <p>Award</p>
-            </a>
-            <a href="{{ route('manpower.index') }}">
-                <i class="fas fa-user-alt"></i>
-                <p>Manpower Requisition</p>
-            </a>
-            <a href="{{ route('feedback.form') }}">
-                <i class="fas fa-user-alt"></i>
-                <p>Testimonials</p>
-            </a>
-            <a href="{{ route('acredited-company') }}">
+             <a href="{{ route('acredited-company') }}">
                 <i class="fas fa-building"></i>
 
                 <p>Acredited Company</p>
@@ -82,20 +48,109 @@
 
                 <p>Add Job Offer</p>
             </a>
-            <a href="{{ route('bulletin.index') }}">
+             <a href="{{ route('award.index') }}">
+                <i class="fas fa-user-alt"></i>
+                <p>Award</p>
+            </a>
+              <a href="{{ route('bulletin.index') }}">
             <i class="fas fa-briefcase"></i>
 
                 <p>Bulletin Board</p>
             </a>
+             <a href="{{ route('calendars') }}">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Calendar</p>
+            </a>
+            <!--  <a href="{{ route('profile.index') }}">-->
+            <!--  <i class="fas fa-id-badge"></i>-->
+            <!--    <p>Company Profile</p>-->
+            <!--</a>-->
+            <a href="{{ route('applications') }}">
+                <i class="fas fa-file-alt"></i>
+                <p>Job Application</p>
+            </a>
+            <a href="{{ route('job-fair') }}">
+                <i class="fas fa-briefcase"></i>
+                <p>Job Fair</p>
+            </a>
+           
+          <a href="{{ route('manpower.index') }}">
+                <i class="fas fa-user-tie"></i>
+                <p>Manpower Requisition</p>
+            </a>
+            
+          
+              <a href="{{ route('ojt.index') }}">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <p>OJT</p>
+            </a>
             <a href="{{ route('executive.index') }}">
-            <i class="fas fa-user"></i>
+              <i class="fas fa-users"></i>
 
                 <p>OUR TEAM</p>
             </a>
+           
+            <a href="{{ route('feedback.form') }}">
+                <i class="fas fa-comment"></i>
+                <p>Testimonials</p>
+            </a>
+              <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="collapse" data-target="#manageUpdatesMenu" aria-expanded="false" aria-controls="manageUpdatesMenu">
+    <i class="fas fa-cogs"></i> <!-- Using a sync icon to represent updates -->
+    <p>Manage Updates</p>
+</a>
+
+          <div id="manageUpdatesMenu" class="collapse">
+            <ul class="nav nav-submenu">
+              <li class="nav-item">
+                  <a href="{{ route('careers.index') }}">
+                  <i class="fas fa-user-alt"></i>
+                  <p>Career</p>
+                </a>
+              </li>
+              <li class="nav-item">
+            <a href="{{ route('ojtupdates.index') }}">
+                  <i class="fas fa-user-alt"></i>
+                  <p>OJT</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('companyprofiles.index') }}">
+                  <i class="fas fa-user-alt"></i>
+                  <p>Company Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('companymanpowers.index') }}">
+                  <i class="fas fa-user-alt"></i>
+                  <p>Manpower Requisition</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
+           
+          
+            
+          
+
 
 
     </div>
 </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(function (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetMenu = document.querySelector(this.dataset.target);
+      targetMenu.classList.toggle('collapse');
+    });
+  });
+});
+</script>
